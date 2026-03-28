@@ -311,6 +311,16 @@
       height: 18px;
     }
 
+    .yohaku-message-bubble a {
+      color: #8a7a55;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+
+    .yohaku-user-message .yohaku-message-bubble a {
+      color: #fff;
+    }
+
     @media (max-width: 400px) {
       #yohaku-chat-window {
         width: calc(100vw - 32px);
