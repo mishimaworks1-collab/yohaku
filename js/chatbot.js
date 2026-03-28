@@ -438,15 +438,13 @@
         body: JSON.stringify({ messages: conversationHistory }),
       });
 
-      if (!response.ok) throw new Error('Network error');
-
       // タイピングインジケーターを除去してボットメッセージを追加
       typingEl.remove();
       const botBubble = addMessage('', 'bot', messagesEl);
 
       // JSONレスポンス処理
       const data = await response.json();
-      const botText = data.error || data.text || '';
+      const botText = data.error || data.text || 'エラーが発生しました';
       botBubble.innerHTML = botText.replace(/\n/g, '<br>');
       scrollToBottom(messagesEl);
 
