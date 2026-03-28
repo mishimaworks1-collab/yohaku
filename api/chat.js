@@ -176,6 +176,6 @@ module.exports = async (req, res) => {
     res.status(200).json({ text });
   } catch (error) {
     console.error('Claude API エラー:', error);
-    res.status(500).json({ error: 'エラーが発生しました。しばらく経ってからお試しください。' });
+    res.status(500).json({ error: error.message || 'エラーが発生しました。' });
   }
 };
