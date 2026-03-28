@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- OGP基本設定 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="YOHAKU 宿泊パス先行販売｜ITADORI SAUNAの新ブランド誕生！">
+<meta property="og:description" content="特別な休日をもっと豊かに。数量限定・割引付きの前売りパス受付中！">
+<meta property="og:image" content="http://yohaku.itadori-sauna.com/https://yohaku.itadori-sauna.com/image/img1-1.jpeg">
+<meta property="og:url" content="http://yohaku.itadori-sauna.com/yohaku">
+<meta property="og:site_name" content="YOHAKU by ITADORI SAUNA">
+
+<!-- Twitterカード対応（任意） -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YOHAKU 宿泊パス先行販売｜ITADORI SAUNAの新ブランド誕生！">
+<meta name="twitter:description" content="ITADORI SAUNAの新ブランドYOHAKUが誕生。今だけの特別価格！">
+<meta name="twitter:image" content="http://yohaku.itadori-sauna.com/https://yohaku.itadori-sauna.com/image/img1-1.jpeg">
+
+
+  <title>YOHAKU 宿泊パス先行販売｜ITADORI SAUNAの新ブランド誕生！</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      font-family: 'Yu Mincho', serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.8;
+      letter-spacing: 1px;
+    }
+    header {
+      background-color: #fff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0 0 1rem;
+      font-weight: 500;
+    }
+    header p {
+      font-size: 1.25rem;
+      color: #666;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/featured/?nature,forest') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 400;
+      
+    }
+    .section {
+      padding: 0.3rem 2rem;
+      margin: auto;
+    }
+
+    .section_max {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
+
+    .section p {
+      font-size: 0.9rem;
+      color: #505050;
+    }
+
+    .instagram-fixed {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      
+    }
+
+    .buy-now-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.buy-now-fixed.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.buy-now-circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle,rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0.698) 100%);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 1px 4px 3px #00000070;
+}
+
+.limited-label {
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  font-weight: bold;
+}
+
+.buy-label {
+  font-size: 0.9rem;
+}
+
+
+
+
+
+    .fullscreen-slider {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fullwidth-swiper,
+.fullwidth-swiper .swiper-wrapper,
+.fullwidth-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.fullwidth-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination.custom-number {
+  position: absolute !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  left: auto !important;
+  width: auto !important;
+  display: flex;
+  gap: 5px;
+}
+
+.swiper-pagination.custom-number .swiper-pagination-bullet {
+  background: white;
+  opacity: 0.4;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.swiper-pagination.custom-number .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.logo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+}
+
+.logo-overlay img {
+  max-width: 200px; /* ロゴの大きさは調整 */
+  height: auto;
+  opacity: 0.9; /* 必要なら透明度も調整 */
+}
+
+
+
+    .highlight {
+      background-color: #eaf3ec;
+      border-left: 4px solid #2e5d3f;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    th, td {
+      padding: 1.2rem;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    .button {
+      transition: all 0.3s ease;
+      display: inline-block;
+      background-color: #111111;
+      color: white;
+      width: 80%;
+      padding: 1rem 0;
+      margin: 0 auto;
+      margin-top: 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 1rem;
+      font-family: neue-haas-grotesk-text, sans-serif;
+    }
+    .button:hover {
+      background-color: #484848;
+      transform: scale(1.05);
+    }
+
+    .button_white{
+      background-color:white ;
+      color:#111111 ;
+      font-weight: 600;
+    }
+
+    .button_white:hover {
+      background-color: #cecece;
+      transform: scale(1.05);
+    }
+
+    .button_footer{
+      background-color:rgba(30, 160, 43, 0.9) ;
+      font-family: 'Yu Mincho', serif;
+      color:#ffffff ;
+      padding: 0.5rem 0;
+      margin-top: 0;
+      max-width: 600px;
+    }
+
+    .button_footer:hover {
+      background-color: rgba(30, 160, 43, 0.7);
+      transform: scale(1.05);
+    }
+
+    .feature-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 6rem;
+    }
+    .feature-image {
+      flex: 1;
+      min-width: 300px;
+      height: 350px;
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .feature-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .feature-text {
+      flex: 1;
+      min-width: 300px;
+      font-size: 1.1rem;
+    }
+    .feature-text h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+      .hero-text {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.3rem;
+      color: #fff;
+    }
+
+    .notice-section {
+      background-color: #e1e1e1;
+      padding: 1rem 1rem;
+      border-top: 1px solid #eee;
+      color: #333;
+    }
+    .notice-section h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      width: 60%;
+      margin:  0 auto;
+      margin-bottom: 1rem;
+    }
+    .notice-section ul {
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 1.2rem;
+      list-style: disc;
+    }
+    .notice-section li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      font-size: 0.8rem;
+    }
+
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+<body>
+
+  <a href="https://www.instagram.com/yohaku_itadorisauna/" target="_blank">
+    <div class="instagram-fixed">
+      <img src="image/instagram.avif" alt="インスタのアイコン" width="40px">
+    </div>
+  </a>
+
+  <a href="https://www.chillnn.com/1920c22bffa1c9/shopping/step1#hotelMenu" class="buy-now-button" id="buyNowBtn">
+    <div class="buy-now-fixed">
+      <div class="buy-now-circle">
+        <span class="limited-label">6/30まで</span>
+        <span class="buy-label">BUY NOW</span>
+      </div>
+    </div>
+  </a>
+
+  <div class=" concept" style="background: url('https://yohaku.itadori-sauna.com/image/img1-1.jpeg') no-repeat center center/cover; color: white; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">
+    <div style="background: rgba(0,0,0,0.5); padding: 3rem;  margin: 0 auto;">
+      <div style="width: 100%; max-width: 800px; margin: 0 auto;">
+        <p style="color: #ccc; font-size: 0.9rem; margin-bottom: 0.5rem;">New Open</p>
+        <h1 style="font-size: 1.6rem; font-weight: normal; line-height: 1.6; margin-bottom: 1.5rem;">
+          極上のサウナ体験と<br>
+          大自然のグランピングを<br>
+          お得に先取り</h1>
+        <p>ITADORI SAUNAの新ブランド「YOHAKU（余白）」が誕生します。</p>
+        <p>ITADORI SAUNAの4周年とYOHAKUの開業を記念して、今だけの特別なキャンペーンを実施中！</p>
+     </div>
+    </div>
+  </div>
+
+  <!-- 数量限定アピール丸ボタン -->
+  <div style="display: flex; justify-content: center; align-items: center; height: 120px; margin-top: -120px; position: relative; z-index: 10;">
+    <div style="position: absolute; background: #e12323; color: white; border-radius: 50%;  font-weight:400; font-size: 0.9rem; text-align: center; width: 120px; height: 120px; right: 10px; bottom: -50px; margin: 0 auto; display: flex; flex-direction: column;justify-content: center; align-items: center;line-height: 1.4;" >
+      <span style="font-size: 1.2rem;">6/30まで！</span>前売りチケット
+      <br>販売中
+    </div>
+  </div>
+  
+
+  
+
+  <div class="concept" style="background: radial-gradient(
+    circle 200px at center,#252525 0%,#1b1b1b 50%,#000000 100%); padding: 30px 0; color: white; text-align: center;">
+    <h2 style="margin: 0; letter-spacing: 5px;" >YOHAKU</h2>
+    <h3 style="margin-top: -10px; font-size: 0.8rem; letter-spacing: 2px;">ITADORI SAUNA</h3>
+
+    <h2 style="font-weight: 400; line-height: 2rem; font-size: 1.4rem;">ただ泊まるだけじゃない
+      <br>わたしに還るリトリート</h2>
+    <p style="padding: 0 1rem; font-size: 0.9rem;">ITADORI SAUNAには行きたいけど遠い...
+      <br>自然は好きだけど、快適に泊まりたい...</p>
+    <p style="padding: 0 1rem; font-size: 0.9rem;">そんな声に応えるため、YOHAKUが誕生します！</p>
+  </div>
+
+  
+
+  
+  
+
+<section id="ticket-section" class="fullscreen-slider">
+  <div class="logo-overlay">
+    <img src="https://yohaku.itadori-sauna.com/image/yohaku-logo.png" alt="YOHAKUロゴ">
+  </div>
+  <div class="swiper fullwidth-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://yohaku.itadori-sauna.com/image/img2-1.jpeg" alt="slide1"></div>
+      <div class="swiper-slide"><img src="https://yohaku.itadori-sauna.com/image/img2-2.jpeg" alt="slide2"></div>
+      <div class="swiper-slide"><img src="https://yohaku.itadori-sauna.com/image/img2-3.jpeg" alt="slide3"></div>
+    </div>
+    <!-- 右下のページネーション -->
+    <div class="swiper-pagination custom-number"></div>
+  </div>
+</section>
+
+
+<div class="section concept" data-aos="fade-up">
+  <div style="max-width: 500px; margin: 3rem auto 0; text-align: left; margin-bottom: 50px;">
+    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">Introduction</p>
+    <h2 style="font-weight: normal; line-height: 1.6; margin-top: 0; margin-bottom: 1.5rem;">
+      いつもの週末を楽しくする<br>
+      ＜YOHAKU＞の暮らし体験
+    </h2>
+    <p>
+      遠くの自然に出かけたり、家でゆっくり過ごしたり。<br>
+      大好きな週末は、少しおしゃれを楽しんで、<br>
+      自然の中でリラックスした時間を過ごしたい。<br><br>
+      肩の力が抜けるようなYOHAKUの空間で、<br>
+      いつもの休日がもっと心地よく、もっと豊かになる。<br>
+      そんな時間をお届けします。
+    </p>
+  </div>
+</div>
+
+<div class="section" data-aos="fade-up" >
+<div class="section_max" style=" display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap  ; margin-bottom: 150px;">
+  <div style=" display: flex; flex-direction: column; align-items: center; gap: 1rem; font-family: neue-haas-grotesk-text, sans-serif;">
+    <div style="margin-top: 0.5rem; writing-mode: vertical-rl; text-orientation: mixed; font-size: 0.6rem; color: #999; text-align: center; line-height: 1rem;">
+      YOHAKU<br>in Itadori
+    </div>
+    <span style="font-size: 0.5rem; background: #111; color: #fff; border-radius: 50%; padding: 0.2rem 0.3rem; display: inline-block;">01</span>
+    <span style="font-size: 1rem; font-weight: bold; writing-mode: vertical-rl; text-orientation: mixed;">GUESTROOM</span>
+  </div>
+  <div style="flex: 1; text-align: left;">
+    <h2 style=" font-weight: 400; margin-bottom: 1rem; margin-top: 0;">まるで秘密基地。</h2>
+    <p>木のぬくもりと静けさに包まれた空間で、五感が研ぎ澄まされる時間を。</p>
+    <div style="position: relative;">
+      <img src="https://yohaku.itadori-sauna.com/image/img3-1.jpeg" style="max-height: 500px; max-height: 500px; height: auto; min-height: 400px; object-fit: cover; width: 100%; max-width: 800px;">
+      <img src="https://yohaku.itadori-sauna.com/image/img3-2.jpeg" style="width: 40%; min-width: 150px; object-fit: cover; max-height: 300px; max-height: 300px; height: auto; min-height: 200px; position: absolute; bottom: -100px; right: -20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="section" data-aos="fade-up" >
+<div class="section_max" style=" display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap  ; margin-bottom: 150px;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; font-family: neue-haas-grotesk-text, sans-serif;">
+    <div style="margin-top: 0.5rem; writing-mode: vertical-rl; text-orientation: mixed; font-size: 0.6rem; color: #999; text-align: center; line-height: 1rem;">
+      YOHAKU<br>in Itadori
+    </div>
+    <span style="font-size: 0.5rem; background: #111; color: #fff; border-radius: 50%; padding: 0.2rem 0.3rem; display: inline-block;">02</span>
+    <span style="font-size: 1rem; font-weight: bold; writing-mode: vertical-rl; text-orientation: mixed;">EQUIPMENT</span>
+  </div>
+<div style="flex: 1; text-align: left;">
+    <h2 style=" font-weight: 400; margin-bottom: 1rem; margin-top: 0;">自然と調和した、<br>小さな快適。</h2>
+    <p>必要最小限だけど快適な設備が、自然と過ごす時間を引き立ててくれます。</p>
+    <div style="position: relative;">
+      <img src="https://yohaku.itadori-sauna.com/image/img4-1.jpeg" style="max-height: 500px; height: auto; min-height: 400px; object-fit: cover; width: 100%; max-width: 800px;">
+      <img src="https://yohaku.itadori-sauna.com/image/img4-2.jpeg" style="width: 40%; min-width: 150px; object-fit: cover; max-height: 300px; height: auto; min-height: 200px; position: absolute; bottom: -100px; right: -20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="section" data-aos="fade-up" >
+<div class="section_max" style=" display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap  ; margin-bottom: 150px;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; font-family: neue-haas-grotesk-text, sans-serif;">
+    <div style="margin-top: 0.5rem; writing-mode: vertical-rl; text-orientation: mixed; font-size: 0.6rem; color: #999; text-align: center; line-height: 1rem;">
+      YOHAKU<br>in Itadori
+    </div>
+    <span style="font-size: 0.5rem; background: #111; color: #fff; border-radius: 50%; padding: 0.2rem 0.3rem; display: inline-block;">03</span>
+    <span style="font-size: 1rem; font-weight: bold; writing-mode: vertical-rl; text-orientation: mixed;">LOCATION</span>
+  </div>
+<div style="flex: 1; text-align: left;">
+    <h2 style=" font-weight: 400; margin-bottom: 1rem; margin-top: 0;">川の音で目覚め、<br>星空に包まれて眠る。</h2>
+    <p>板取川のほとりに佇むYOHAKUは、都会では味わえない静けさと自然に満ちています。</p>
+    <div style="position: relative;">
+      <img src="https://yohaku.itadori-sauna.com/image/img5-1.jpeg" style="max-height: 500px; height: auto; min-height: 400px; object-fit: cover; width: 100%; max-width: 800px;">
+      <img src="https://yohaku.itadori-sauna.com/image/img5-2.jpeg" style="width: 40%; min-width: 150px; object-fit: cover; max-height: 300px; height: auto; min-height: 200px; position: absolute; bottom: -100px; right: -20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="section" data-aos="fade-up" >
+<div class="section_max" style=" display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap  ; margin-bottom: 150px;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; font-family: neue-haas-grotesk-text, sans-serif;">
+    <div style="margin-top: 0.5rem; writing-mode: vertical-rl; text-orientation: mixed; font-size: 0.6rem; color: #999; text-align: center; line-height: 1rem;">
+      YOHAKU<br>in Itadori
+    </div>
+    <span style="font-size: 0.5rem; background: #111; color: #fff; border-radius: 50%; padding: 0.2rem 0.3rem; display: inline-block;">04</span>
+    <span style="font-size: 1rem; font-weight: bold; writing-mode: vertical-rl; text-orientation: mixed;">SAUNA</span>
+  </div>
+<div style="flex: 1; text-align: left;">
+    <h2 style=" font-weight: 400; margin-bottom: 1rem; margin-top: 0;">川辺のテントサウナで<br> 心と身体をととのえる。</h2>
+    <p>薪の香りとともに、心と体がゆるやかにととのっていく非日常。</p>
+    <div style="position: relative;">
+      <img src="https://yohaku.itadori-sauna.com/image/img6-1.jpeg" style="max-height: 500px; height: auto; min-height: 400px; object-fit: cover; width: 100%; max-width: 800px;">
+      <img src="https://yohaku.itadori-sauna.com/image/img6-2.jpeg" style="width: 40%; min-width: 150px; object-fit: cover; max-height: 300px; height: auto; min-height: 200px; position: absolute; bottom: -100px; right: -20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="section" data-aos="fade-up" >
+<div class="section_max" style=" display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap  ; margin-bottom: 150px;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; font-family: neue-haas-grotesk-text, sans-serif;">
+    <div style="margin-top: 0.5rem; writing-mode: vertical-rl; text-orientation: mixed; font-size: 0.6rem; color: #999; text-align: center; line-height: 1rem;">
+      YOHAKU<br>in Itadori
+    </div>
+    <span style="font-size: 0.5rem; background: #111; color: #fff; border-radius: 50%; padding: 0.2rem 0.3rem; display: inline-block;">05</span>
+    <span style="font-size: 1rem; font-weight: bold; writing-mode: vertical-rl; text-orientation: mixed;">OUTDOOR DINING</span>
+  </div>
+<div style="flex: 1; text-align: left;">
+    <h2 style=" font-weight: 400; margin-bottom: 1rem; margin-top: 0;">食材を持ち寄って、<br> 仲間と語らう自由な夜。</h2>
+    <p>地元の旬の食材を持ち寄って、星空の下で焚き火を囲みながらディナー。</p>
+    <div style="position: relative;">
+      <img src="https://yohaku.itadori-sauna.com/image/img7-1.jpeg" style="max-height: 500px; height: auto; min-height: 400px; object-fit: cover; width: 100%; max-width: 800px;">
+      <img src="https://yohaku.itadori-sauna.com/image/img7-2.jpeg" style="width: 40%; min-width: 150px; object-fit: cover; max-height: 300px; height: auto; min-height: 200px; position: absolute; bottom: -100px; right: -20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</div>
+</div>
+<p style="text-align: right; margin-right: 1rem; font-size: 0.8rem;">※掲載の写真はイメージです。<br>実際とは異なる場合がございます。</p>
+
+<h2 data-aos="fade-up" style="font-size: 1.4rem; font-weight: 400; max-width: 800px; margin: 1rem auto; margin-top: 50px; padding-left: 1rem;">わたしに還る、<br>1泊2日のととのい方</h2>
+<section data-aos="fade-up"  class="fullscreen-slider" style=" height: 40vw; min-height:450px; position: relative;">
+  <div class="swiper fullwidth-swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="position: relative;">
+          <img src="https://yohaku.itadori-sauna.com/image/img8-1.jpeg" alt="slide1" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(60%);">
+          <div style="position: absolute; width: 90%; max-width: 800px; top: 80%; left: 50%; transform: translate(-50%, -50%);
+                      color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.6); text-align: left;">
+            <h3 style="margin: 0; font-size: 1.2rem;">15:00｜チェックイン・YOHAKUへ</h3>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">森の中の三角屋根に一歩踏み入れた瞬間、木の香りと静けさに包まれる。荷物を置いて深呼吸。旅のスイッチが自然と入る。</p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="position: relative;">
+          <img src="https://yohaku.itadori-sauna.com/image/img8-2.jpeg" alt="slide1" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(60%);">
+          <div style="position: absolute; width: 90%; max-width: 800px; top: 80%; left: 50%; transform: translate(-50%, -50%);
+                      color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.6); text-align: left;">
+            <h3 style="margin: 0; font-size: 1.2rem;">16:00｜サウナでリセット</h3>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">薪をくべ、あたたまりながらゆっくりと汗を流す。水風呂で火照った身体を冷やし、板取川に足をつける。もうこの時点で「ととのい」が始まっている。</p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="position: relative;">
+          <img src="https://yohaku.itadori-sauna.com/image/img8-3.jpeg" alt="slide1" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(60%);">
+          <div style="position: absolute; width: 90%; max-width: 800px; top: 80%; left: 50%; transform: translate(-50%, -50%);
+                      color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.6); text-align: left;">
+            <h3 style="margin: 0; font-size: 1.2rem;">18:00｜焚き火と食事</h3>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">地元の直売所で買った野菜や肉を焼きながら、炎の揺らぎに心がほどけていく。食べる、語らう、笑う。焚き火の時間は、自然が調味料。</p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="position: relative;">
+          <img src="https://yohaku.itadori-sauna.com/image/img8-4.jpeg" alt="slide1" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(60%);">
+          <div style="position: absolute; width: 90%; max-width: 800px; top: 80%; left: 50%; transform: translate(-50%, -50%);
+                      color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.6); text-align: left;">
+            <h3 style="margin: 0; font-size: 1.2rem;">21:00｜満天の星空と静かな夜</h3>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">明かりのない夜空に広がるのは、手が届きそうな星たち。YOHAKU Roomに戻り、ぬくもりあるベッドへ。夜の山の静けさに、心が深く沈んでいく。</p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="position: relative;">
+          <img src="https://yohaku.itadori-sauna.com/image/img8-5.jpeg" alt="slide1" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(60%);">
+          <div style="position: absolute; width: 90%; max-width: 800px; top: 80%; left: 50%; transform: translate(-50%, -50%);
+                      color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.6); text-align: left;">
+            <h3 style="margin: 0; font-size: 1.2rem;">7:00｜朝サウナと川の音</h3>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">目覚めたら、またサウナへ。川のせせらぎと鳥の声を聴きながら、火を囲む朝時間。昨日とは違う、ととのい方に気づく。</p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="position: relative;">
+          <img src="https://yohaku.itadori-sauna.com/image/img8-6.webp" alt="slide1" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(60%);">
+          <div style="position: absolute; width: 90%; max-width: 800px; top: 80%; left: 50%; transform: translate(-50%, -50%);
+                      color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.6); text-align: left;">
+            <h3 style="margin: 0; font-size: 1.2rem;">10:00｜チェックアウト</h3>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">もう帰りたくないような気もするけれど、からだの奥まで、ちゃんとリセットされた感覚を残してYOHAKUをあとに。</p>
+          </div>
+        </div>
+    </div>
+    <!-- 右下のページネーション -->
+    <div class="swiper-pagination custom-number"></div>
+  </div>
+</section>
+
+
+<div class="section" style="background-color: rgba(10, 31, 33, 0.07); padding: 4rem 2rem;">
+  <div class="section_max" >
+    <h2 style="text-align: center; font-size: 1.3rem; font-weight: 500; margin-top: 4rem; margin-bottom: 1rem;"><span style="font-size: 2rem; letter-spacing: 5px; border-bottom: 1px solid #202020; padding-bottom: 0.5rem;">OPEN記念</span><br>今だけの特別価格</h2>
+    <p>YOHAKUの新しいスタートを、応援してくれるあなたへ。枚数＆期間限定で、お得な宿泊パスを特別価格でご用意しました。<br>この機会に、自然に還る旅を一緒に楽しみませんか？</p>
+
+
+
+<div class="section_max">
+
+  <h3  style="margin-bottom: 0; color:#111 ; line-height: 1rem; padding-left: 0.5rem; padding-bottom: 5px; padding-top: 5px; border-left: 3px solid #111; ">早割チケット</h3>
+  <p style="margin-top: 0; background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(105, 105, 105, 1) 100%); color: white; width:8.1rem; padding: 0 0.5rem;">6月1日〜6月30日</p>
+  <div style="display: flex; flex-direction: column; gap: 3rem; ">
+    <div data-aos="fade-up" style="border: 1px solid #ccc; border-radius: 3px;  background: #fff; position: relative;">
+      <div style="position: absolute; top: -2rem; right: -1rem; background: #111; color: white; font-size: 0.8rem; font-weight: bold; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2);  ">限定<span style="font-size: 1.4rem;">30</span>枚</div>
+      <h3 style="text-align: center; margin-top: 0; padding: 1rem ; background: radial-gradient(circle,rgb(237, 209, 183) 0%, rgb(150, 86, 36) 100%); border-top-right-radius: 2px; border-top-left-radius: 2px; line-height: 1.4rem;"><span style="font-size: 0.9rem; letter-spacing: 0.5rem;">LIGHT</span><br>ライトパス</h3>
+      <div style="padding: 1rem;">
+        <div style="align-items: center;">
+          <div style="display: flex; justify-content: space-around; border-bottom: solid 1px #ccc; padding-bottom: 1rem;">
+            <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">1泊<img src="https://yohaku.itadori-sauna.com/image/stay-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+            <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">10%OFF<img src="https://yohaku.itadori-sauna.com/image/ticket-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+            <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">2年間<img src="https://yohaku.itadori-sauna.com/image/time-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+          </div>
+          <div style="display: flex; justify-content: space-evenly; padding-top: 1rem;">
+            <div style="display: flex; flex-direction:column; text-align: center;">通常価格：<br>44,000円</div>
+            <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.3rem;">→</div>
+            <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.5rem;">39,600円</div>
+          </div>
+          <div style="font-size: 1.8rem; color: #ef4b4c; font-weight: bold; text-align: center;">4,400円お得！</div>
+        </div>
+        <div style="margin-top: 1rem; padding-top: 1rem; font-size: 0.9rem; color: #555; border-top:solid 1px #ccc;">特典：
+          <br>ITADORI SAUNA 20%OFF券×1枚</div>
+        </div>
+      </div>
+
+        <div data-aos="fade-up" style="border: 1px solid #ccc; border-radius: 3px;  background: #fff; position: relative;">
+          <div style="position: absolute; top: -2rem; right: -1rem; background: #111; color: white; font-size: 0.8rem; font-weight: bold; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2);  ">限定<span style="font-size: 1.4rem;">20</span>枚</div>
+          <h3 style="text-align: center; margin-top: 0; padding: 1rem ; background: radial-gradient(circle,rgb(245, 245, 245) 0%, rgb(142, 142, 142) 100%); border-top-right-radius: 2px; border-top-left-radius: 2px; line-height: 1.4rem;"><span style="font-size: 0.9rem; letter-spacing: 0.5rem;">STANDART</span><br>スタンダートパス</h3>
+      <div style="padding: 1rem;">
+        <div style="align-items: center;">
+          <div style="display: flex; justify-content: space-around; border-bottom: solid 1px #ccc; padding-bottom: 1rem;">
+            <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">5泊<img src="https://yohaku.itadori-sauna.com/image/stay-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+            <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">20%OFF<img src="https://yohaku.itadori-sauna.com/image/ticket-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+            <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">無期限<img src="https://yohaku.itadori-sauna.com/image/time-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+          </div>
+          <div style="display: flex; justify-content: space-evenly; padding-top: 1rem;">
+            <div style="display: flex; flex-direction:column; text-align: center;">通常価格：<br>220,000円</div>
+            <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.3rem;">→</div>
+            <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.5rem;">176,000円</div>
+          </div>
+          <div style="font-size: 1.8rem; color: #ef4b4c; font-weight: bold; text-align: center;">44,000円お得！</div>
+        </div>
+        <div style="margin-top: 1rem; padding-top: 1rem; font-size: 0.9rem; color: #555; border-top:solid 1px #ccc;">特典：
+          <br>優先予約
+          <br>ITADORI SAUNA 30%OFF券×2枚・20%OFF券×3枚
+        </div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" style="border: 1px solid #ccc; border-radius: 3px;  background: #fff; position: relative;">
+        <div style="position: absolute; top: -2rem; right: -1rem; background: #111; color: white; font-size: 0.8rem; font-weight: bold; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2);  ">限定<span style="font-size: 1.4rem;">10</span>枚</div>
+        <h3 style="text-align: center; margin-top: 0; padding: 1rem ; background: radial-gradient(circle,rgb(255, 248, 219) 0%, rgb(222, 180, 31) 100%); border-top-right-radius: 2px; border-top-left-radius: 2px; line-height: 1.4rem;"><span style="font-size: 0.9rem; letter-spacing: 0.5rem;">PREMIUM</span><br>プレミアムパス</h3>
+        <div style="padding: 1rem;">
+          <div style="align-items: center;">
+            <div style="display: flex; justify-content: space-around; border-bottom: solid 1px #ccc; padding-bottom: 1rem;">
+              <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">10泊<img src="https://yohaku.itadori-sauna.com/image/stay-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+              <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">30%OFF<img src="https://yohaku.itadori-sauna.com/image/ticket-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+              <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">無期限<img src="https://yohaku.itadori-sauna.com/image/time-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-evenly; padding-top: 1rem;">
+              <div style="display: flex; flex-direction:column; text-align: center;">通常価格：<br>440,000円</div>
+              <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.3rem;">→</div>
+              <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.5rem;">308,000円</div>
+            </div>
+            <div style="font-size: 1.8rem; color: #ef4b4c; font-weight: bold; text-align: center;">132,000円お得！</div>
+          </div>
+          <div style="margin-top: 1rem; padding-top: 1rem; font-size: 0.9rem; color: #555; border-top:solid 1px #ccc;">特典：
+            <br>優先予約
+            <br>ITADORI SAUNA ペア無料券×1・30%OFF券×4枚・20%OFF券×5枚
+            <br>サポーター看板ネーム掲載</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 1rem;">
+          <a href="https://www.chillnn.com/1920c22bffa1c9/shopping/step1#hotelMenu" class="button">BUY YOHAKU PASS</a>
+        </div>
+
+        <h3 style="margin-bottom: 0; color:#e12323 ; line-height: 1rem; padding-left: 0.5rem; padding-bottom: 5px; padding-top: 5px; border-left: 3px solid #e12323; font-size: 1.5rem; margin-top: 100px; ">超早割チケット</h3>
+    <p style="margin-top: 0; background: linear-gradient(90deg,rgba(255, 0, 0, 1) 0%, rgba(255, 132, 0, 1) 100%); color: white; width:11rem; padding: 0 0.5rem; font-size: 1.1rem;">5月15日〜5月31日</p>
+    <div style="display: flex; flex-direction: column; gap: 3rem; ">
+      <div data-aos="fade-up" style="border: 1px solid #ccc; border-radius: 3px;  background: #fff; position: relative;">
+        <div style="position: absolute; top: -2rem; right: -1rem; background: #e12323; color: white; font-size: 0.8rem; font-weight: bold; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2);  "><span style="font-size: 1.4rem;">完売</span></div>
+        <h3 style="text-align: center; margin-top: 0; padding: 1rem ; background: radial-gradient(circle,rgb(237, 209, 183) 0%, rgb(150, 86, 36) 100%); border-top-right-radius: 2px; border-top-left-radius: 2px; line-height: 1.4rem;"><span style="font-size: 0.9rem; letter-spacing: 0.5rem;">LIGHT</span><br>ライトパス</h3>
+        <div style="padding: 1rem;">
+          <div style="align-items: center;">
+            <div style="display: flex; justify-content: space-around; border-bottom: solid 1px #ccc; padding-bottom: 1rem;">
+              <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">1泊<img src="https://yohaku.itadori-sauna.com/image/stay-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+              <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">20%OFF<img src="https://yohaku.itadori-sauna.com/image/ticket-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+              <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">2年間<img src="https://yohaku.itadori-sauna.com/image/time-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-evenly; padding-top: 1rem;">
+              <div style="display: flex; flex-direction:column; text-align: center;">通常価格：<br>44,000円</div>
+              <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.3rem;">→</div>
+              <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.5rem;">35,200円</div>
+            </div>
+            <div style="font-size: 1.8rem; color: #ef4b4c; font-weight: bold; text-align: center;">8,800円お得！</div>
+          </div>
+          <div style="margin-top: 1rem; padding-top: 1rem; font-size: 0.9rem; color: #555; border-top:solid 1px #ccc;">特典：
+            <br>ITADORI SAUNA 20%OFF券×1枚</div>
+          </div>
+        </div>
+
+          <div data-aos="fade-up" style="border: 1px solid #ccc; border-radius: 3px;  background: #fff; position: relative;">
+            <div style="position: absolute; top: -2rem; right: -1rem; background: #e12323; color: white; font-size: 0.8rem; font-weight: bold; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2);  "><span style="font-size: 1.4rem;">完売</span></div>
+            <h3 style="text-align: center; margin-top: 0; padding: 1rem ; background: radial-gradient(circle,rgb(245, 245, 245) 0%, rgb(142, 142, 142) 100%); border-top-right-radius: 2px; border-top-left-radius: 2px; line-height: 1.4rem;"><span style="font-size: 0.9rem; letter-spacing: 0.5rem;">STANDART</span><br>スタンダートパス</h3>
+        <div style="padding: 1rem;">
+          <div style="align-items: center;">
+            <div style="display: flex; justify-content: space-around; border-bottom: solid 1px #ccc; padding-bottom: 1rem;">
+              <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">5泊<img src="https://yohaku.itadori-sauna.com/image/stay-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+              <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">40%OFF<img src="https://yohaku.itadori-sauna.com/image/ticket-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+              <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">無期限<img src="https://yohaku.itadori-sauna.com/image/time-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-evenly; padding-top: 1rem;">
+              <div style="display: flex; flex-direction:column; text-align: center;">通常価格：<br>220,000円</div>
+              <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.3rem;">→</div>
+              <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.5rem;">132,000円</div>
+            </div>
+            <div style="font-size: 1.8rem; color: #ef4b4c; font-weight: bold; text-align: center;">88,000円お得！</div>
+          </div>
+          <div style="margin-top: 1rem; padding-top: 1rem; font-size: 0.9rem; color: #555; border-top:solid 1px #ccc;">特典：
+            <br>優先予約
+            <br>ITADORI SAUNA 30%OFF券×2枚・20%OFF券×3枚
+          </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" style="border: 1px solid #ccc; border-radius: 3px;  background: #fff; position: relative;">
+          <div style="position: absolute; top: -2rem; right: -1rem; background: #e12323; color: white; font-size: 0.8rem; font-weight: bold; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2);  "><span style="font-size: 1.4rem;">完売</span></div>
+          <h3 style="text-align: center; margin-top: 0; padding: 1rem ; background: radial-gradient(circle,rgb(255, 248, 219) 0%, rgb(222, 180, 31) 100%); border-top-right-radius: 2px; border-top-left-radius: 2px; line-height: 1.4rem;"><span style="font-size: 0.9rem; letter-spacing: 0.5rem;">PREMIUM</span><br>プレミアムパス</h3>
+          <div style="padding: 1rem;">
+            <div style="align-items: center;">
+              <div style="display: flex; justify-content: space-around; border-bottom: solid 1px #ccc; padding-bottom: 1rem;">
+                <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">10泊<img src="https://yohaku.itadori-sauna.com/image/stay-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+                <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">50%OFF<img src="https://yohaku.itadori-sauna.com/image/ticket-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+                <div style="display: flex; flex-direction:column; width: 30%; text-align: center;">無期限<img src="https://yohaku.itadori-sauna.com/image/time-icon.png" alt="" width="60%" style="max-width: 75px; margin: 0 auto;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-evenly; padding-top: 1rem;">
+                <div style="display: flex; flex-direction:column; text-align: center;">通常価格：<br>440,000円</div>
+                <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.3rem;">→</div>
+                <div style="display: flex; align-items: flex-end; text-align: center; font-size: 1.5rem;">220,000円</div>
+              </div>
+              <div style="font-size: 1.8rem; color: #ef4b4c; font-weight: bold; text-align: center;">220,000円お得！</div>
+            </div>
+            <div style="margin-top: 1rem; padding-top: 1rem; font-size: 0.9rem; color: #555; border-top:solid 1px #ccc;">特典：
+              <br>優先予約
+              <br>ITADORI SAUNA ペア無料券×1・30%OFF券×4枚・20%OFF券×5枚
+              <br>サポーター看板ネーム掲載</div>
+            </div>
+          </div>
+
+      <div style="text-align: center; margin: 2rem 0;">
+        <a href="https://www.chillnn.com/1920c22bffa1c9/shopping/step1#hotelMenu" class="button">BUY YOHAKU PASS</a>
+      </div>
+    </div>
+</div>
+</div>
+
+        <div class="notice-section" id="notice">
+          <h2>注意事項</h2>
+          <ul>
+            <li>購入後のキャンセル・払い戻しはお受けできません。</li>
+            <li>2025年7月中のOPENを予定しております。OPEN日は現在未定となっておりますので、予めご了承ください。最新情報はITADORI SAUNA／YOHAKUの公式Instagramにて随時発信いたします。</li>
+            <li>有効期限内にご利用ください。期限の延長はできません。</li>
+            <li>宿泊のご予約は事前に専用フォームよりお願いいたします。</li>
+            <li>ご希望日程で予約が取れない場合がございます。</li>
+            <li>1パスで2名様分の宿泊が可能です（追加人数は別途有料）。</li>
+            <li>本パスは素泊まりです。食材はご持参ください。</li>
+            <li>本パスは譲渡・共有が可能です。</li>
+            <li>繁忙期のご利用には追加料金がかかる場合があります。</li>
+            <li>施設運営上の理由により、営業日やサービス内容が変更となる場合があります。</li>
+            <li>天候や災害による中止時は、再予約のご案内をいたします。</li>
+            <li>ITADORI SAUNA招待券ご利用案内について
+              <br><u>◼︎無料招待券（ペア招待・20,000円分）</u>
+              <br>・2名様分のご利用料金 20,000円分相当としてご利用いただけます。
+              <br>・人数追加、繁忙期料金が発生する場合は、差額を現地にてお支払いいただきます。
+              <br>・閑散期料金や下プラン（通常料金が20,000円未満のプラン）をご利用の場合でも差額の返金（キャッシュバック）はございません。
+              <br>・YOHAKU前売り券と同様の扱いとなります。
+              <br><u>◼︎割引券（30％OFF／20％OFF）</u>
+              <br>・ITADORI SAUNAのご利用料金総額から 30％OFF／20％OFF でご利用いただけます。
+              <br>・人数や繁忙期・閑散期にかかわらず、一律％割引が適用されます。
+              <br>・現地での追加オプション料金などは割引対象外となります（※対象範囲は事前にご確認ください）。
+            </li>
+          </ul>
+        </div>
+
+  </div>
+</div>
+</div>
+
+<div class="section concept" data-aos="fade-up" style="padding: 4rem 2rem;">
+<div class="section_max">
+  <div style="max-width: 800px; margin: 0 auto; text-align: left; margin-bottom: 50px;">
+    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">Supporter</p>
+    <h2 style="font-weight: normal; line-height: 1.6; margin-top: 0; margin-bottom: 1.5rem;">
+      共につくる、YOHAKUの未来
+    </h2>
+    <img src="https://yohaku.itadori-sauna.com/image/img9-1.jpeg" alt="" width="100%">
+    <p>
+      プレミアムパスをご購入いただいた方は、YOHAKUのサポーターです。<br>
+      この場所のはじまりを応援してくれた“仲間”として、<br>
+      あなたのお名前や企業名を「サポーター看板」に刻ませていただきます。<br><br>
+      特別な時間と想いを、この場所に、一緒に残しませんか？
+    </p>
+  </div>
+  <div style="text-align: center; margin-top: 1rem;">
+    <a href="https://www.chillnn.com/1920c22bffa1c9/shopping/step1#hotelMenu" class="button">BUY YOHAKU PASS</a>
+  </div>
+</div>
+</div>
+
+<div data-aos="fade-up" class="section" style="background-color: #fafafa; padding: 4rem 2rem; border-top: 1px solid #eee;">
+  <h2 style="text-align: center; font-size: 1.4rem; font-weight: 500; margin-bottom: 1rem;">法人・団体様向けのご提案</h2>
+  <p style="text-align: left; max-width: 800px; margin: 0 auto 2rem; font-size: 0.95rem; color: #333;">
+    YOHAKUパスは、法人様・団体様向けの福利厚生やインセンティブギフト、顧客様へのノベルティとしてもご活用いただけます。<br>
+    社員様への健康支援や、リトリートを通じたコミュニケーション促進、働き方改革の一環としてぜひご検討ください。
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+    <div style="flex: 1; min-width: 250px; max-width: 350px; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; text-align: center;">
+      <img src="image/ticket-icon.png" alt="福利厚生利用" style="width: 60px; margin-bottom: 1rem;">
+      <h3>福利厚生や社員特典として</h3>
+      <p style="font-size: 0.9rem; color: #555; text-align: left;">社員様のメンタルケアやリフレッシュ休暇、福利厚生の一環としてご利用いただけます。</p>
+    </div>
+    <div style="flex: 1; min-width: 250px; max-width: 350px; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; text-align: center;">
+      <img src="image/present-icon.svg" alt="ギフト利用" style="width: 60px; margin-bottom: 1rem;">
+      <h3>顧客様向けギフトに</h3>
+      <p style="font-size: 0.9rem; color: #555; text-align: left;">取引先へのギフトやキャンペーン特典、周年記念品としてもおすすめです。</p>
+    </div>
+    <div style="flex: 1; min-width: 250px; max-width: 350px; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; text-align: center;">
+      <img src="image/receipt-icon.svg" alt="領収書対応" style="width: 60px; margin-bottom: 1rem;">
+      <h3>領収書発行対応</h3>
+      <p style="font-size: 0.9rem; color: #555; text-align: left;">法人名義での購入・請求書払い・領収書発行にも対応しております。<br>以下の法人での購入申込みフォームにご連絡ください。</p>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin: 2rem 0;">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSRWOX8gdEMrMqdLY1yTqdlYlwX-hntjVch5md_GYcGGVifg/viewform?usp=header" class="button">法人での購入申込みはこちら</a>
+  </div>
+
+  <div class="notice-section" id="notice">
+    <h2>注意事項</h2>
+    <ul>
+      <li>本パスは法人・団体様向けの特別販売です。個人利用目的での申込はご遠慮ください。</li>
+      <li>ご購入後の変更・キャンセル・払い戻しはお受けできません。</li>
+      <li>パスは社内外の福利厚生・顧客接待・キャンペーン等でご自由にご活用いただけます。</li>
+      <li>領収書・請求書の発行が可能です。ご希望の場合はフォーム内でご選択ください。請求書払い（後払い）にも対応いたします。</li>
+      <li>ご利用の際は、通常のYOHAKU予約サイトから事前にご予約ください。</li>
+      <li>繁忙期のご予約は、希望日によってはお受けできない場合があります。</li>
+      <li>チケットの有効期限、内容、特典は予告なく変更となる場合があります。</li>
+      <li>本パスは譲渡・贈呈も可能です。</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<div data-aos="fade-up" class="section" style="background: #f0f0f0; padding: 3rem 2rem; border-top: 1px solid #eee; ">
+  <h2 style="text-align: center; font-size: 1.4rem;">予約から宿泊までの流れ</h2>
+
+  <div style=" padding: 1rem 10%;  margin: 0 auto; display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; scroll-snap-type: x mandatory; align-items: center;">
+
+    <!-- STEP 1 -->
+    <div style=" max-width: 300px; width: 70%; height: 250px;  padding: 1rem; flex-shrink: 0; scroll-snap-align: start;  text-align: center;  padding-left: 15vw;" >
+      <div style="width: 100px; height: 100px; margin: 0 auto 1rem; background: #222; border-radius: 50%; display: flex;
+  align-items: center;"><img src="https://yohaku.itadori-sauna.com/image/mobile-icon.png" alt="" width="70%" style="margin: 0 auto;"></div>
+      <h3>前売り券を購入</h3>
+      <p>プランを選んで決済。<br>メールで案内が届きます。</p>
+    </div>
+
+    <!-- → 矢印 -->
+    <div style="flex-shrink: 0; font-size: 2rem; color: #ccc;">→</div>
+
+    <!-- STEP 2 -->
+    <div style=" max-width: 300px; width: 70%; height: 250px;   padding: 1rem; flex-shrink: 0; scroll-snap-align: start;  text-align: center;">
+      <div style="width: 100px; height: 100px; margin: 0 auto 1rem; background: #222; border-radius: 50%; display: flex;
+  align-items: center;"><img src="https://yohaku.itadori-sauna.com/image/mail-icon.png" alt="" width="70%" style="margin: 0 auto;"></div>
+      <h3>メール受信</h3>
+      <p>予約URLや使い方が届きます。</p>
+    </div>
+
+    <!-- → 矢印 -->
+    <div style="flex-shrink: 0; font-size: 2rem; color: #ccc;">→</div>
+
+    <!-- STEP 3 -->
+    <div style=" max-width: 300px; width: 70%; height: 250px;   padding: 1rem; flex-shrink: 0; scroll-snap-align: start;  text-align: center;">
+      <div style="width: 100px; height: 100px; margin: 0 auto 1rem; background: #222; border-radius: 50%; display: flex;
+  align-items: center;"><img src="https://yohaku.itadori-sauna.com/image/calendar-icon.png" alt="" width="70%" style="margin: 0 auto;"></div>
+      <h3>日程を予約</h3>
+      <p>フォームからお好きな日を選べます。</p>
+    </div>
+
+    <!-- → 矢印 -->
+    <div style="flex-shrink: 0; font-size: 2rem; color: #ccc;">→</div>
+
+    <!-- STEP 4 -->
+    <div style=" max-width: 300px; width: 70%; height: 250px;   padding: 1rem; flex-shrink: 0; scroll-snap-align: start;  text-align: center;  padding-right: 10vw;">
+      <div style="width: 100px; height: 100px; margin: 0 auto 1rem; background: #222; border-radius: 50%; display: flex;
+  align-items: center;"><img src="https://yohaku.itadori-sauna.com/image/trip-icon.png" alt="" width="70%" style="margin: 0 auto;"></div>
+      <h3>ご来場・宿泊</h3>
+      <p>ととのいの体験をお楽しみください。</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div  class="section" style="background: #ececec; padding: 3rem 2rem; border-top: 1px solid #eee; ">
+  <h2 style="text-align: center; font-size: 1.4rem; font-weight: 500; margin-bottom: 2rem;">前売りチケットに関するQ&A</h2>
+
+  <div data-aos="fade-up" style="max-width: 800px; margin: 0 auto; font-size: 0.95rem; color: #444; line-height: 1.8;">
+    <p><strong>Q. いつから宿泊できますか？</strong><br>
+      A. 2025年7月中のOPENを予定しております。OPEN日は現在未定です。最新情報は公式Instagramにて随時お知らせいたします。</p>
+
+    <p><strong>Q. いつから予約ができますか？</strong><br>
+      A. 予約開始時期は、OPEN日が決まり次第、公式Instagramや公式WEBサイト、ならびにチケットご購入者様にはメールでもお知らせいたします。公式Instagram・WEBサイトで随時最新情報を発信いたします。</p>  
+    
+    <p><strong>Q. チケットは家族や友人と共有できますか？</strong><br>
+    A. はい。譲渡・シェアどちらも可能です。</p>
+
+    <p><strong>Q. 有効期限はありますか？</strong><br>
+    A. プランによって異なります。1泊2年間有効です。5泊・10泊は無期限有効です。</p>
+
+    <p><strong>Q. 3人以上でも使えますか？</strong><br>
+    A. 1棟の定員は4名までです。前売りチケットには2名分が含まれており、3名以上でご利用の際は、追加人数分の料金を現地にてお支払いいただきます。なお、その際もご購入いただいたチケットの割引率が適用されます。</p>
+
+    <p><strong>Q. 繁忙期でも使えますか？</strong><br>
+      A. 繁忙期は追加料金で利用可能です。逆に閑散期なら施設利用券がもらえるので、どちらでもお得にご利用いただけます。</p>
+
+    <p><strong>Q. 前売りPASSの料金には何が含まれていますか？</strong><br>
+      A. 前売りパスには、<b>ご宿泊（1棟貸切／2名様分）、宿泊棟のサウナ利用、BBQ設備の利用</b>等が含まれます。BBQ機材やアメニティ、その他の付帯サービスについては、OPEN時に公式サイトにて詳細を公開いたします。</p>
+
+    <p><strong>Q. 現地で支払いが必要なものはありますか？</strong><br>
+      A. 繁忙期の追加料金、3名以上でご利用の場合の追加人数料金、オプションサービス（飲食・アクティビティなど）につきましては現地決済となります。詳細はOPEN時に公式サイトでご案内いたします。</p>
+
+    <p><strong>Q. 宿泊の予約方法は？</strong><br>
+    A. 通常通りWEBサイトからご予約いただけます。備考欄に「前売りパス利用」とご記入ください。</p>
+
+    <p><strong>Q. チケットの払い戻しはできますか？</strong><br>
+    A. 恐れ入りますが、払い戻しには対応しておりません。</p>
+
+    <p><strong>Q. 連泊で使うこともできますか？</strong><br>
+    A. はい。1回のご予約で複数泊まとめてご利用いただけます。</p>
+  </div>
+</div>
+
+<section class="fullscreen-slider" style="height:300px;">
+  <div class="swiper fullwidth-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://yohaku.itadori-sauna.com/image/img10-1.jpeg" alt="slide1"></div>
+      <div class="swiper-slide"><img src="https://yohaku.itadori-sauna.com/image/img10-2.jpeg" alt="slide2"></div>
+      <div class="swiper-slide"><img src="https://yohaku.itadori-sauna.com/image/img10-3.jpeg" alt="slide3"></div>
+    </div>
+    <!-- 右下のページネーション -->
+    <div class="swiper-pagination custom-number"></div>
+  </div>
+</section>
+
+<div class="section concept" style="background-color: #222; padding: 4rem 2rem;">
+  <div data-aos="fade-up"  style="color: #ffffff; max-width: 800px; margin: 0 auto; text-align: left; margin-bottom: 50px;">
+    <p style="color: #bcbcbc; font-size: 0.9rem; margin-bottom: 0.5rem;">Special Price</p>
+    <h2 style="font-weight: normal; line-height: 1.6; margin-top: 0; margin-bottom: 1.5rem;">
+      今だけの特別なYOHAKU体験を、あなたに。
+    </h2>
+    <img src="https://yohaku.itadori-sauna.com/image/img1-1.jpeg" alt="" width="100%">
+    <p style="color: #f1f1f1;">
+      日々、疲れてふっと立ち止まる余裕もないあなたへ。
+      <br>そんな日常の中に、ささやかな“余白”を楽しむ時間を届けたくて、
+      <br>YOHAKUは生まれました。
+    </p>
+    <p style="color: #f1f1f1;">今だけの特別特価で是非お楽しみください。</p>
+  </div>
+  <div style="text-align: center; margin-top: 1rem;">
+    <a href="https://www.chillnn.com/1920c22bffa1c9/shopping/step1#hotelMenu" class="button button_white" >BUY YOHAKU PASS</a>
+  </div>
+</div>
+
+
+<footer>
+  <div class=" concept" style="background: url('https://yohaku.itadori-sauna.com/image/img11-1.jpeg') no-repeat center center/cover; color: white; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">
+    <div style="background: rgba(0,0,0,0.5); padding: 3rem;  margin: 0 auto;">
+      <div style="width: 100%; max-width: 800px; margin: 0 auto;">
+        <a href="https://itadori-sauna.com/" target="_blank">
+          <img src="https://yohaku.itadori-sauna.com/image/itadori-icon-0.png" alt="" width="100px" style="margin: 0 auto;">
+        </a>
+        <a href="https://yohaku.itadori-sauna.com/">
+          <img src="https://yohaku.itadori-sauna.com/image/yohaku-logo.png" alt="YOHAKUロゴ" width="100px" style="margin: 0 auto;">
+        </a>
+        <h1 style="font-size: 0.8rem; font-weight: normal; line-height: 1.6; margin-bottom: 1.5rem; margin-top: 0;">
+          株式会社asobiba｜ITADORI SAUNA</h1>
+          <div style="text-align: center; margin-top: 1rem;">
+            <a href="https://lin.ee/G3B9L9c" target="_blank" rel="nofollow" class="button button_footer" style="margin-bottom: 1rem;">お問い合わせはこちら</a>
+          </div>
+          <a href="https://www.instagram.com/itadorisauna/" target="_blank" rel="nofollow"><img src="https://yohaku.itadori-sauna.com/image/instagram-icon.png" alt="" width="30px" style="margin: 0.5rem;"></a>
+          <a href="https://www.youtube.com/@channel-ex7iz" target="_blank" rel="nofollow"><img src="https://yohaku.itadori-sauna.com/image/YouTube-icon.png" alt="" width="30px" style="margin: 0.5rem;"></a>
+      </div>
+    </div>
+  </div>
+  <p style="font-size: 0.8rem;">※掲載の写真はイメージです。<br>実際とは異なる場合がございます。</p>
+  <div>&copy; asobiba.com</div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  
+</script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+///フェードイン
+AOS.init({ once: true, duration: 1200 });
+
+///追従ボタン
+  document.addEventListener("DOMContentLoaded", function () {
+    const buyNowBtn = document.getElementById("buyNowBtn");
+    const trigger = document.querySelector("#ticket-section");
+
+    window.addEventListener("scroll", () => {
+      const triggerTop = trigger.getBoundingClientRect().top + window.scrollY;
+      const scrollY = window.scrollY;
+
+      if (scrollY > triggerTop - 300) {
+        buyNowBtn.querySelector('.buy-now-fixed').classList.add("visible");
+      } else {
+        buyNowBtn.querySelector('.buy-now-fixed').classList.remove("visible");
+      }
+    });
+  });
+
+///写真スワイプ
+  new Swiper('.fullwidth-swiper', {
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false
+  },
+  effect: 'fade',
+  speed: 800,
+  pagination: {
+    el: '.swiper-pagination.custom-number',
+    clickable: true
+
+  }
+});
+
+</script>
+</body>
+  </html>
+

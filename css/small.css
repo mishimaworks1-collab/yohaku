@@ -1,0 +1,139 @@
+@charset "utf=8";
+
+@media screen and (max-width:639px) {
+
+
+ /* font size
+  * --------------------------------------- */
+
+/* header
+  * --------------------------------------- */
+
+	#menu {
+		height: 60px;
+	}
+
+	.global-nav li {
+		font-size: 15px;
+		padding-left: 12px;
+		padding-right: 12px;
+		letter-spacing: 2px;
+	}
+
+	/* Menu
+   * --------------------------------------- */
+
+	#global-nav {
+		width: 100%;
+	}
+
+	.global-nav {
+		display: block;
+	}
+
+	.spot_global-nav {
+		display: flex;
+	}
+
+	/*ナビメニューのスタイルを指定*/
+	nav.NavMenu {
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		text-align: center;
+		width: 100%;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.3s linear;
+		padding: 0;
+	}
+
+	nav.NavMenu ul li {
+		font-size: 1em;
+		list-style-type: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	nav.NavMenu ul li:last-child {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+
+	nav.NavMenu ul li a {
+		display: block;
+		color: rgb(0, 0, 0);
+		padding: 1em 0;
+	}
+
+	#menu li a {
+		text-decoration: none;
+		color: rgb(0, 0, 0);
+	}
+
+	nav.NavMenu.active {
+		pointer-events: auto;
+		opacity: 1;
+	}
+
+	#menu li.active a {
+		color: rgb(79, 79, 79);
+	}
+
+	.Toggle {
+		display: block;
+		position: fixed;
+		right: 13px;
+		top: 12px;
+		width: 42px;
+		height: 42px;
+		cursor: pointer;
+		z-index: 3;
+	}
+
+	.logo_img {
+		height: 55px;
+	}
+	.logo_img .log_img-1 {
+		padding-bottom: 5px;
+	}
+
+	.logo_img h1 {
+		border-bottom: solid 1px #000;
+		font-size: 0.8rem;
+		animation: fadeIn 4s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+	}
+
+	.logo_img p {
+    padding-top: 2px;
+		font-size: 0.5rem;
+		margin-bottom: 0;
+		animation: fadeIn 4s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+	}
+
+	.sns {
+		top: 15px;
+		right: 75px;
+	}
+
+	.logo_img img {
+		height: 40px;
+		transform: translate(0%, -10%);
+	}
+	
+	 #itemlist img {
+      height: 150px;
+    }
+
+		.card img {
+		height: 250px;
+		}
+
+/* footer
+  * --------------------------------------- */
+  .footer-section {
+	flex: 1 1 45%;
+}
+  
+}
