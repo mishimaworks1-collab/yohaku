@@ -470,7 +470,7 @@
 
     } catch (error) {
       typingEl.remove();
-      addMessage('申し訳ありません、接続エラーが発生しました。\n公式LINE（https://lin.ee/VVGbdrP）またはお電話（050-1807-4256）でお問い合わせください。', 'bot', messagesEl);
+      addMessage('申し訳ありません、接続エラーが発生しました。\n公式LINE（https://lin.ee/VVGbdrP）よりお問い合わせください。', 'bot', messagesEl);
     } finally {
       sendBtn.disabled = false;
       inputEl.focus();
