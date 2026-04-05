@@ -271,11 +271,12 @@
 
   .plan-card-image-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
     padding: 1rem 1.2rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.15) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .plan-card-image-overlay .plan-tag {
@@ -285,7 +286,7 @@
     border: 1px solid #d4b98a;
     display: inline-block;
     padding: 0.2rem 0.6rem;
-    margin-bottom: 0.4rem;
+    align-self: flex-start;
   }
 
   .plan-card-image-overlay h3 {
