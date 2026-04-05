@@ -235,6 +235,61 @@
     margin: 1.5rem auto;
   }
 
+  .plan-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .plan-card {
+    background-color: #fff;
+    border: 1px solid #e8e2d8;
+    padding: 1.8rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: box-shadow 0.3s;
+  }
+
+  .plan-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .plan-card .plan-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: #8a7a55;
+    border: 1px solid #8a7a55;
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .plan-card h3 {
+    font-size: 1.05rem;
+    font-weight: normal;
+    margin: 0 0 0.6rem;
+    color: #222;
+  }
+
+  .plan-card p {
+    font-size: 0.82rem;
+    color: #777;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .plan-card .plan-meta {
+    font-size: 0.78rem;
+    color: #999;
+    border-top: 1px solid #eee;
+    padding-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
   @media (max-width: 600px) {
     .campaign-section {
       padding: 3rem 1.5rem;
@@ -318,7 +373,55 @@
     </div>
   </section>
 
-  <!-- ③ キャンペーン詳細 -->
+  <!-- ③ おすすめプラン -->
+  <section style="background-color: #fafaf8;">
+    <div class="campaign-section" data-aos="fade-up">
+      <p class="section-label">recommended plans</p>
+      <h2>YOHAKUのサウナとは<br>違う体験を、ここで。</h2>
+      <p>YOHAKU敷地内のサウナとは異なる空間・スタイル・設備を持つプランを厳選しました。宿泊の翌日に訪れることで、対比がより深い満足感につながります。</p>
+
+      <div class="plan-cards">
+
+        <a href="https://itadori-sauna.com/reserve/" target="_blank" rel="nofollow" class="plan-card">
+          <span class="plan-tag">CLASSIC</span>
+          <h3>清流サウナ<br>1号・2号</h3>
+          <p>板取川のすぐそばで、ロウリュと清流に身をゆだねる2時間。ITADORI SAUNAの原点ともいえる定番プラン。</p>
+          <div class="plan-meta">
+            <span>定員：最大5名</span>
+            <span>時間：120分</span>
+            <span>料金：2名 ¥11,000〜</span>
+          </div>
+        </a>
+
+        <a href="https://itadori-sauna.com/reserve/" target="_blank" rel="nofollow" class="plan-card">
+          <span class="plan-tag">NATURE</span>
+          <h3>KOMOREBI<br>半透明サウナ</h3>
+          <p>半透明の壁越しに差し込む光と揺れる木々。自然と融合するコンセプトのサウナは、他にはない没入感をもたらします。</p>
+          <div class="plan-meta">
+            <span>定員：最大8名</span>
+            <span>時間：120分</span>
+            <span>料金：貸切2名 ¥14,000〜</span>
+          </div>
+        </a>
+
+        <a href="https://itadori-sauna.com/reserve/" target="_blank" rel="nofollow" class="plan-card">
+          <span class="plan-tag">FOR 2</span>
+          <h3>ペアサウナ<br>2名限定</h3>
+          <p>大切な人と、ゆったり3時間。専用SUP・サウナポンチョ・ドリンク付きの充実した内容で、特別な時間を演出します。</p>
+          <div class="plan-meta">
+            <span>定員：2名限定</span>
+            <span>時間：180分</span>
+            <span>料金：¥14,000〜</span>
+          </div>
+        </a>
+
+      </div>
+
+      <p style="font-size: 0.8rem; color: #999;">※ 料金は季節・時期により変動します。最新の料金はITADORI SAUNAの予約ページでご確認ください。</p>
+    </div>
+  </section>
+
+  <!-- ④ キャンペーン詳細 -->
   <section style="background-color: #f7f4ef;">
     <div class="campaign-section" data-aos="fade-up">
       <p class="section-label">campaign</p>
@@ -350,7 +453,7 @@
     </div>
   </section>
 
-  <!-- ④ 使い方3ステップ -->
+  <!-- ⑤ 使い方3ステップ -->
   <section>
     <div class="campaign-section" data-aos="fade-up">
       <p class="section-label">how to use</p>
@@ -389,7 +492,7 @@
     </div>
   </section>
 
-  <!-- ⑤ CTA -->
+  <!-- ⑥ CTA -->
   <section class="cta-section" data-aos="fade-up">
     <p class="section-label" style="text-align:center; font-size:0.75rem; letter-spacing:0.2em; color:#999;">reserve</p>
     <div class="divider"></div>
