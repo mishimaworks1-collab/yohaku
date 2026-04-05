@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="キャンペーン｜YOHAKU宿泊者限定 ITADORI SAUNA 30%OFF">
+  <meta property="og:description" content="YOHAKU宿泊者限定特典。ITADORI SAUNAが通常料金より30%OFFでご利用いただけます。">
+  <meta property="og:image" content="https://yohaku.itadori-sauna.com/image/sauna-1.jpeg">
+  <meta property="og:url" content="https://yohaku.itadori-sauna.com/campaign.html">
+  <meta property="og:site_name" content="YOHAKU by ITADORI SAUNA">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="キャンペーン｜YOHAKU宿泊者限定 ITADORI SAUNA 30%OFF">
+  <meta name="twitter:description" content="YOHAKU宿泊者限定特典。ITADORI SAUNAが通常料金より30%OFFでご利用いただけます。">
+  <meta name="twitter:image" content="https://yohaku.itadori-sauna.com/image/sauna-1.jpeg">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/small.css">
+
+  <title>キャンペーン｜YOHAKU宿泊者限定 ITADORI SAUNA 30%OFF</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F11F5P7DD3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F11F5P7DD3');
+</script>
+
+<style>
+  .campaign-hero {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #1a1a1a;
+  }
+
+  .campaign-hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+  }
+
+  .campaign-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+  }
+
+  .campaign-hero-content .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: #d4b98a;
+    margin-bottom: 1.5rem;
+  }
+
+  .campaign-hero-content h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 1.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .campaign-hero-content .discount-badge {
+    display: inline-block;
+    border: 1px solid #d4b98a;
+    color: #d4b98a;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    letter-spacing: 0.15em;
+    padding: 0.6rem 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .campaign-hero-content .scroll-hint {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: #aaa;
+  }
+
+  .campaign-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .campaign-section .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: #999;
+    margin-bottom: 0.5rem;
+  }
+
+  .campaign-section h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 300;
+    line-height: 1.7;
+    margin: 0 0 2rem;
+  }
+
+  .campaign-section p {
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+
+  .campaign-section img {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .highlight-box {
+    background-color: #f7f4ef;
+    border-left: 3px solid #8a7a55;
+    padding: 2rem 2.5rem;
+    margin: 3rem 0;
+  }
+
+  .highlight-box .big-discount {
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 300;
+    color: #8a7a55;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .highlight-box .big-discount span {
+    font-size: 1.5rem;
+  }
+
+  .highlight-box p {
+    color: #666;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .steps {
+    counter-reset: step;
+    margin: 2rem 0;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .step:last-child {
+    border-bottom: none;
+  }
+
+  .step-number {
+    counter-increment: step;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #8a7a55;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .step-body h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0 0 0.4rem;
+    color: #333;
+  }
+
+  .step-body p {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .note-box {
+    background-color: #f7f7f7;
+    padding: 1.5rem 2rem;
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.8;
+    margin: 2rem 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 4rem 2rem 6rem;
+    background-color: #f7f4ef;
+  }
+
+  .cta-section p {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+
+  .cta-section .button {
+    display: inline-block;
+    background-color: #8a7a55;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    letter-spacing: 0.15em;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+  }
+
+  .cta-section .button:hover {
+    opacity: 0.8;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background-color: #8a7a55;
+    margin: 1.5rem auto;
+  }
+
+  @media (max-width: 600px) {
+    .campaign-section {
+      padding: 3rem 1.5rem;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ▼ ヘッダー -->
+<header id="menu">
+  <div id="button02" class="menu-trigger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div id="wrapper">
+    <nav id="global-nav" class="NavMenu">
+      <ul class="global-nav">
+        <li data-menuanchor="page1" class="active"><a href="https://itadori-sauna.com/">TOP</a></li>
+        <li data-menuanchor="page2"><a href="https://itadori-sauna.com/about/">特徴<p>About</p></a></li>
+        <li data-menuanchor="page3"><a href="https://itadori-sauna.com/reserve/">予約<p>Reserve</p></a></li>
+        <li data-menuanchor="stay"><a href="https://yohaku.itadori-sauna.com/stay.html">宿泊<p>STAY</p></a></li>
+        <li data-menuanchor="page6"><a href="https://itadori-sauna.com/sns/">最新情報<p>SNS</p></a></li>
+        <li data-menuanchor="page9"><a href="https://itadori-sauna.com/faq/">よくある質問<p>Q＆A</p></a></li>
+        <li data-menuanchor="page7"><a href="https://itadori-sauna.com/access/">行き方<p>Access</p></a></li>
+        <li><a href="https://itadori-sauna.com/blog/">ブログ<p>Blog</p></a></li>
+      </ul>
+    </nav>
+
+    <div class="Toggle">
+      <span></span>
+      <span></span>
+      <span>menu</span>
+    </div>
+
+    <ul class="sns">
+      <li><a href="https://www.instagram.com/yohaku_itadorisauna/" rel="nofollow">
+        <p><img src="https://yohaku.itadori-sauna.com/image/instagram.avif" loading="lazy" alt="instagram"></p>
+      </a></li>
+      <li><a href="https://www.youtube.com/@channel-ex7iz" rel="nofollow">
+        <p><img src="https://yohaku.itadori-sauna.com/image/youtube.avif" loading="lazy" alt="youtube"></p>
+      </a></li>
+    </ul>
+  </div>
+
+  <a href="https://itadori-sauna.com/">
+    <div class="logo_img">
+      <img src="https://yohaku.itadori-sauna.com/image/top_logo.avif" loading="lazy" alt="ロゴ画像">
+      <div class="log_img-1">
+        <h1>ITADORI SAUNA</h1>
+        <p>Outdoor River Sauna Resort</p>
+      </div>
+    </div>
+  </a>
+</header>
+
+<main>
+
+  <!-- ① Hero -->
+  <section class="campaign-hero">
+    <img src="image/sauna-1.jpeg" alt="YOHAKU×ITADORI SAUNAキャンペーン">
+    <div class="campaign-hero-content" data-aos="fade-up">
+      <p class="label">YOHAKU GUEST EXCLUSIVE</p>
+      <h1>泊まるから、<br>もっと整う。</h1>
+      <p class="discount-badge">ITADORI SAUNA 30% OFF</p>
+      <p class="scroll-hint">scroll ↓</p>
+    </div>
+  </section>
+
+  <!-- ② 体験の価値 -->
+  <section>
+    <div class="campaign-section" data-aos="fade-up">
+      <p class="section-label">why</p>
+      <h2>一泊だから、<br>できる整い方がある。</h2>
+      <p>日帰りでは叶わない、贅沢な時間の使い方があります。前夜から板取の空気に溶け込み、翌朝、誰もいない時間にサウナへ。川の冷たさと静寂の中でととのう体験は、YOHAKU宿泊者だけが手にできる特権です。</p>
+      <img src="image/river-1.JPG" alt="板取川">
+      <p>そんな特別な時間をより多くの方に届けたいという思いから、YOHAKU宿泊者限定でITADORI SAUNAの30%OFFクーポンをお届けしています。</p>
+    </div>
+  </section>
+
+  <!-- ③ キャンペーン詳細 -->
+  <section style="background-color: #f7f4ef;">
+    <div class="campaign-section" data-aos="fade-up">
+      <p class="section-label">campaign</p>
+      <h2>キャンペーン詳細</h2>
+
+      <div class="highlight-box">
+        <div class="big-discount">30<span>% OFF</span></div>
+        <p>ITADORI SAUNA 通常料金より30%割引</p>
+      </div>
+
+      <table style="width:100%; border-collapse: collapse; font-size: 0.9rem; color: #444;">
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 0.8rem 0; width: 40%; color: #999;">対象者</td>
+          <td style="padding: 0.8rem 0;">YOHAKU宿泊ゲスト限定</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 0.8rem 0; color: #999;">対象施設</td>
+          <td style="padding: 0.8rem 0;">ITADORI SAUNA（全プラン）</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 0.8rem 0; color: #999;">割引率</td>
+          <td style="padding: 0.8rem 0;">30% OFF</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.8rem 0; color: #999;">期間</td>
+          <td style="padding: 0.8rem 0;">通年（期間制限なし）</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ④ 使い方3ステップ -->
+  <section>
+    <div class="campaign-section" data-aos="fade-up">
+      <p class="section-label">how to use</p>
+      <h2>3ステップで<br>かんたんに使えます。</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <h3>YOHAKUを予約する</h3>
+            <p>通常通りYOHAKUの宿泊予約を完了してください。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <h3>予約完了メールを確認する</h3>
+            <p>予約完了後に届くメールに、30%OFFディスカウントコードが記載されています。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <h3>ITADORI SAUNAを予約・コードを入力する</h3>
+            <p>ITADORI SAUNAの予約時にコードを入力するだけ。30%OFFが適用されます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="note-box">
+        ※ YOHAKU宿泊予約 → ITADORI SAUNA予約の順にお手続きください。<br>
+        ※ ディスカウントコードはお一人様1回のご利用となります。<br>
+        ※ 他の割引・クーポンとの併用はできません。<br>
+        ※ ご不明な点は公式LINEよりお気軽にお問い合わせください。
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ CTA -->
+  <section class="cta-section" data-aos="fade-up">
+    <p class="section-label" style="text-align:center; font-size:0.75rem; letter-spacing:0.2em; color:#999;">reserve</p>
+    <div class="divider"></div>
+    <p>まずはYOHAKUの宿泊予約から。<br>特別な一泊が、特別な整い体験へと続きます。</p>
+    <a href="https://itadori-sauna.booking.chillnn.com/?planId=1971fe6863d29d&openRC=true" target="_blank" rel="nofollow" class="button">YOHAKUを予約する</a>
+  </section>
+
+</main>
+
+<footer>
+  <h1>ITADORI SAUNA</h1>
+  <p>Outdoor River Sauna Resort</p>
+
+  <p>公式LINEからお気軽にお問い合わせください</p>
+  <a href="https://lin.ee/Z5WvsRhc" rel="nofollow"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
+
+  <div class="footer">
+    <div class="footer-section">
+      <h4>利用案内</h4>
+      <ul>
+        <li><a href="https://itadori-sauna.com//about/">特徴/About</a></li>
+        <li><a href="https://itadori-sauna.com//sauna/">サウナについて</a></li>
+        <li><a href="https://itadori-sauna.com//bbq/">BBQについて</a></li>
+        <li><a href="https://itadori-sauna.com//food/">サウナ飯について</a></li>
+        <li><a href="https://itadori-sauna.com//option/">レンタルについて</a></li>
+        <li><a href="https://itadori-sauna.com//faq/">Q&A</a></li>
+        <li><a href="https://itadori-sauna.com//info/">利用案内</a></li>
+        <li><a href="https://itadori-sauna.com//condition/">利用規約</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>体験・予約</h4>
+      <ul>
+        <li><a href="https://itadori-sauna.com//reserve/">予約/Reserve</a></li>
+        <li><a href="https://yohaku.itadori-sauna.com/stay.html">宿泊/Stay</a></li>
+        <li><a href="https://itadori-sauna.com//point/">サウナのポイント</a></li>
+        <li><a href="https://maps.app.goo.gl/v2YcGqkeZ14Exumc6" rel="nofollow">お客様の声</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>情報</h4>
+      <ul>
+        <li><a href="https://itadorisauna.stores.jp/" target="_blank" rel="nofollow">オンラインショップ</a></li>
+        <li><a href="https://itadori-sauna.com//sns/">最新情報/SNS</a></li>
+        <li><a href="https://itadori-sauna.com//blog/">ブログ</a></li>
+        <li><a href="https://itadori-sauna.com//spot/">周辺観光スポット</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>その他</h4>
+      <ul>
+        <li><a href="https://itadori-sauna.com//access/">アクセス</a></li>
+        <li><a href="https://co-asobiba.itadori-sauna.com/recruitment.html" target="_blank" rel="nofollow">求人応募</a></li>
+        <li><a href="https://co-asobiba.itadori-sauna.com/" target="_blank" rel="nofollow">運営会社</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="copy">
+    <p>&copy;asobiba</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  AOS.init({ once: true, duration: 1200 });
+</script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
