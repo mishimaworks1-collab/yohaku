@@ -256,30 +256,44 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   }
 
-  .plan-card img {
+  .plan-card-image {
+    position: relative;
+    margin: -1.8rem -1.5rem 1.2rem;
+    overflow: hidden;
+  }
+
+  .plan-card-image img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
     display: block;
-    margin: -1.8rem -1.5rem 1.2rem;
-    width: calc(100% + 3rem);
   }
 
-  .plan-card .plan-tag {
+  .plan-card-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 1.2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+  }
+
+  .plan-card-image-overlay .plan-tag {
     font-size: 0.7rem;
     letter-spacing: 0.15em;
-    color: #8a7a55;
-    border: 1px solid #8a7a55;
+    color: #d4b98a;
+    border: 1px solid #d4b98a;
     display: inline-block;
     padding: 0.2rem 0.6rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.4rem;
   }
 
-  .plan-card h3 {
-    font-size: 1.05rem;
+  .plan-card-image-overlay h3 {
+    font-size: 1rem;
     font-weight: normal;
-    margin: 0 0 0.6rem;
-    color: #222;
+    margin: 0;
+    color: #fff;
+    line-height: 1.5;
   }
 
   .plan-card p {
@@ -392,9 +406,13 @@
       <div class="plan-cards">
 
         <a href="https://itadori-sauna.com/reserve/" target="_blank" rel="nofollow" class="plan-card">
-          <img src="image/seiryu.jpeg" alt="清流サウナ">
-          <span class="plan-tag">CLASSIC</span>
-          <h3>清流サウナ<br>1号・2号</h3>
+          <div class="plan-card-image">
+            <img src="image/seiryu.jpeg" alt="清流サウナ">
+            <div class="plan-card-image-overlay">
+              <span class="plan-tag">CLASSIC</span>
+              <h3>清流サウナ<br>1号・2号</h3>
+            </div>
+          </div>
           <p>板取川のすぐそばで、ロウリュと清流に身をゆだねる2時間。ITADORI SAUNAの原点ともいえる定番プラン。</p>
           <div class="plan-meta">
             <span>定員：最大5名</span>
@@ -404,9 +422,13 @@
         </a>
 
         <a href="https://itadori-sauna.com/reserve/" target="_blank" rel="nofollow" class="plan-card">
-          <img src="image/komorebi.jpeg" alt="KOMOREBI">
-          <span class="plan-tag">NATURE</span>
-          <h3>KOMOREBI<br>半透明サウナ</h3>
+          <div class="plan-card-image">
+            <img src="image/komorebi.jpeg" alt="KOMOREBI">
+            <div class="plan-card-image-overlay">
+              <span class="plan-tag">NATURE</span>
+              <h3>KOMOREBI<br>半透明サウナ</h3>
+            </div>
+          </div>
           <p>半透明の壁越しに差し込む光と揺れる木々。自然と融合するコンセプトのサウナは、他にはない没入感をもたらします。</p>
           <div class="plan-meta">
             <span>定員：最大8名</span>
@@ -416,9 +438,13 @@
         </a>
 
         <a href="https://itadori-sauna.com/reserve/" target="_blank" rel="nofollow" class="plan-card">
-          <img src="image/pea.jpeg" alt="ペアサウナ">
-          <span class="plan-tag">FOR 2</span>
-          <h3>ペアサウナ<br>2名限定</h3>
+          <div class="plan-card-image">
+            <img src="image/pea.jpeg" alt="ペアサウナ">
+            <div class="plan-card-image-overlay">
+              <span class="plan-tag">FOR 2</span>
+              <h3>ペアサウナ<br>2名限定</h3>
+            </div>
+          </div>
           <p>大切な人と、ゆったり3時間。専用SUP・サウナポンチョ・ドリンク付きの充実した内容で、特別な時間を演出します。</p>
           <div class="plan-meta">
             <span>定員：2名限定</span>
