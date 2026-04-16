@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- OGP基本設定 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ご利用案内｜サウナ付き一棟貸し宿『YOHAKU』ITADORI SAUNAの新ブランド誕生！">
+<meta property="og:description" content="「人生に余白を」特別な休日をもっと豊かに。自然の中でリラックスした時間をお届けします。">
+<meta property="og:image" content="https://yohaku.itadori-sauna.com/image/img1-1.jpeg">
+<meta property="og:url" content="https://yohaku.itadori-sauna.com/info-test.html">
+<meta property="og:site_name" content="YOHAKU by ITADORI SAUNA">
+
+<!-- Twitterカード対応 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ご利用案内｜サウナ付き一棟貸し宿『YOHAKU』ITADORI SAUNAの新ブランド誕生！">
+<meta name="twitter:description" content="ご利用案内｜サウナ付き一棟貸し宿『YOHAKU』ITADORI SAUNAの新ブランド誕生！">
+<meta name="twitter:image" content="https://yohaku.itadori-sauna.com/image/img1-1.jpeg">
+
+<!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/small.css">
+
+  <title>ご利用案内｜サウナ付き一棟貸し宿『YOHAKU』ITADORI SAUNAの新ブランド誕生！</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<style>
+/* ===== INFO-TEST PAGE STYLES ===== */
+
+/* Sticky Navigation */
+.info-sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background: #111;
+  border-bottom: 1px solid rgba(197,185,143,0.2);
+  padding: 10px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.info-sticky-nav::-webkit-scrollbar { display: none; }
+.info-sticky-nav .nav-inner {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px;
+  min-width: max-content;
+}
+.info-sticky-nav .nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(197,185,143,0.3);
+  background: transparent;
+  color: #aaa;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: inherit;
+}
+.info-sticky-nav .nav-pill .nav-icon {
+  font-size: 0.9rem;
+}
+.info-sticky-nav .nav-pill:hover,
+.info-sticky-nav .nav-pill.active {
+  background: #c5b98f;
+  color: #111;
+  border-color: #c5b98f;
+}
+
+/* Table of Contents */
+.info-toc {
+  padding: 40px 20px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.info-toc h2 {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c5b98f;
+  margin-bottom: 6px;
+  font-weight: 400;
+  border-bottom: none;
+}
+.info-toc h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 300;
+  border-bottom: none;
+}
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@media (max-width: 600px) {
+  .toc-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.toc-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(197,185,143,0.15);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ddd;
+  transition: all 0.3s ease;
+}
+.toc-item:hover {
+  background: rgba(197,185,143,0.1);
+  border-color: rgba(197,185,143,0.4);
+}
+.toc-num {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #c5b98f;
+  min-width: 24px;
+}
+.toc-label {
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+.toc-label small {
+  display: block;
+  font-size: 0.65rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* Highlight Info Cards */
+.info-highlight-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  padding: 0 20px 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.highlight-card {
+  background: linear-gradient(135deg, rgba(197,185,143,0.12), rgba(197,185,143,0.04));
+  border: 1px solid rgba(197,185,143,0.25);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+.highlight-card .hc-icon { font-size: 1.4rem; margin-bottom: 6px; }
+.highlight-card .hc-title {
+  font-size: 0.7rem;
+  color: #c5b98f;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.highlight-card .hc-value {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+}
+.highlight-card .hc-value small {
+  display: block;
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+/* Section Accordion Styles */
+.info-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section-accordion {
+  border-top: 1px solid rgba(197,185,143,0.15);
+}
+.section-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.section-accordion-header .sec-label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #c5b98f;
+  font-weight: 400;
+}
+.section-accordion-header .sec-title {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 4px;
+}
+.section-accordion-header .sec-toggle {
+  font-size: 1.5rem;
+  color: #c5b98f;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.section-accordion.open .sec-toggle {
+  transform: rotate(45deg);
+}
+.section-accordion-body {
+  display: none;
+  padding-bottom: 40px;
+}
+.section-accordion.open .section-accordion-body {
+  display: block;
+}
+
+/* Sub-section Accordion */
+.sub-accordion {
+  border: 1px solid rgba(197,185,143,0.1);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+}
+.sub-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+.sub-accordion-header:hover {
+  background: rgba(197,185,143,0.05);
+}
+.sub-accordion-header h3 {
+  font-size: 1rem;
+  color: #eee;
+  margin: 0;
+  font-weight: 400;
+  border-bottom: none;
+}
+.sub-accordion-header .sub-toggle {
+  font-size: 1.2rem;
+  color: #c5b98f;
+  transition: transform 0.3s ease;
+}
+.sub-accordion.open .sub-toggle {
+  transform: rotate(45deg);
+}
+.sub-accordion-body {
+  display: none;
+  padding: 0 16px 16px;
+}
+.sub-accordion.open .sub-accordion-body {
+  display: block;
+}
+
+/* Section hero image */
+.section-hero-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Info page horizontal-scroll override for consistency */
+.info_php .horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px 0 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.info_php .horizontal-scroll::-webkit-scrollbar { height: 4px; }
+.info_php .horizontal-scroll::-webkit-scrollbar-track { background: transparent; }
+.info_php .horizontal-scroll::-webkit-scrollbar-thumb { background: rgba(197,185,143,0.3); border-radius: 4px; }
+.info_php .horizontal-scroll .card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Horizontal box override */
+.info_php .horizontal-box {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(197,185,143,0.15);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+/* Item list section tweaks */
+.info_php .itemlist-category {
+  margin-bottom: 30px;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #c5b98f;
+  color: #111;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 800;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* FAQ accordion override */
+.info_php details.qa-7 {
+  border: 1px solid rgba(197,185,143,0.15);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+}
+.info_php details.qa-7 summary {
+  padding: 14px 16px;
+  cursor: pointer;
+  color: #eee;
+}
+.info_php details.qa-7 p {
+  padding: 0 16px 14px;
+}
+
+/* Evacuation/rules section */
+.info_php .rules-list ul {
+  padding-left: 1.2rem;
+}
+.info_php .rules-list li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+/* Contact cards */
+.contact-dl .roominfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Single section mode - hide section toggles */
+.info_php.single-section .sec-toggle {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+<header id="menu">
+
+            <div id="button02" class="menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--/#button02 -->
+
+            <div id="wrapper">
+                <nav id="global-nav" class="NavMenu">
+                    <ul class="global-nav">
+                        <li data-menuanchor="page1" class="active"><a href="https://itadori-sauna.com/">TOP
+                            </a></li>
+                        <li data-menuanchor="page2"><a href="https://itadori-sauna.com/about/">特徴
+                                <p>About</p>
+                            </a></li>
+                        <li data-menuanchor="page3"><a href="https://itadori-sauna.com/reserve/">予約
+                                <p>Reserve</p>
+                            </a></li>
+                        <li data-menuanchor="stay"><a href="https://yohaku.itadori-sauna.com/stay.html">宿泊<p>STAY</p></a></li>
+                        <li data-menuanchor="page6"><a href="https://itadori-sauna.com/sns/">最新情報<p>SNS</p></a></li>
+                        <li data-menuanchor="page9"><a href="https://itadori-sauna.com/faq/">よくある質問<p>Q＆A</p></a></li>
+                        <li data-menuanchor="page7"><a href="https://itadori-sauna.com/access/">行き方<p>Access</p></a></li>
+                        <li><a href="https://itadori-sauna.com/blog/">ブログ<p>Blog</p></a></li>
+                    </ul>
+                </nav>
+
+                <!-- ハンバーガーメニュー部分 -->
+                <div class="Toggle">
+                    <span></span>
+                    <span></span>
+                    <span>menu</span>
+                </div>
+
+                <ul class="sns">
+                    <li><a href="https://www.instagram.com/yohaku_itadorisauna/" rel="nofollow">
+                            <p><img src="https://yohaku.itadori-sauna.com/image/instagram.avif" loading="lazy" alt="instagram"></p>
+                        </a></li>
+                    <li><a href="https://www.youtube.com/@channel-ex7iz" rel="nofollow">
+                            <p><img src="https://yohaku.itadori-sauna.com/image/youtube.avif" loading="lazy" alt="youtube"></p>
+                        </a></li>
+                </ul>
+            </div>
+
+            <a href="https://itadori-sauna.com/">
+                <div class="logo_img">
+                    <img src="https://yohaku.itadori-sauna.com/image/top_logo.avif" loading="lazy" alt="ロゴ画像 - 名古屋からアクセス抜群の岐阜の川サウナ">
+                    <div class="log_img-1">
+                        <h1>ITADORI SAUNA</h1>
+                        <p>Outdoor River Sauna Resort</p>
+                    </div>
+                </div>
+            </a>
+
+        </header><!--/header -->
+
+<div class="info_php">
+
+<!-- Sticky Navigation Bar -->
+<nav class="info-sticky-nav" id="infoNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-pill active" data-filter="all"><span class="nav-icon">&#9776;</span> すべて</a>
+    <a href="#checkin" class="nav-pill" data-filter="checkin"><span class="nav-icon">&#128274;</span> チェックイン</a>
+    <a href="#yohaku" class="nav-pill" data-filter="yohaku"><span class="nav-icon">&#127968;</span> 客室の使い方</a>
+    <a href="#sauna" class="nav-pill" data-filter="sauna"><span class="nav-icon">&#128293;</span> サウナの使い方</a>
+    <a href="#itemlist" class="nav-pill" data-filter="itemlist"><span class="nav-icon">&#128221;</span> 備品リスト</a>
+    <a href="#roomitems" class="nav-pill" data-filter="roomitems"><span class="nav-icon">&#127862;</span> 室内販売</a>
+    <a href="#checkout" class="nav-pill" data-filter="checkout"><span class="nav-icon">&#128682;</span> チェックアウト</a>
+    <a href="#rules" class="nav-pill" data-filter="rules"><span class="nav-icon">&#9888;</span> 注意事項</a>
+    <a href="#faq" class="nav-pill" data-filter="faq"><span class="nav-icon">&#10067;</span> よくある質問</a>
+    <a href="#info" class="nav-pill" data-filter="info"><span class="nav-icon">&#128222;</span> お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- Table of Contents -->
+<div class="info-toc" id="tocArea">
+  <h2>GUEST GUIDE</h2>
+  <h3>ご利用案内</h3>
+  <div class="toc-grid">
+    <a href="#checkin" class="toc-item"><span class="toc-num">1</span><span class="toc-label">チェックイン<small>CHECK IN</small></span></a>
+    <a href="#yohaku" class="toc-item"><span class="toc-num">2</span><span class="toc-label">客室の使い方<small>YOHAKU</small></span></a>
+    <a href="#sauna" class="toc-item"><span class="toc-num">3</span><span class="toc-label">サウナの使い方<small>SAUNA</small></span></a>
+    <a href="#itemlist" class="toc-item"><span class="toc-num">4</span><span class="toc-label">備品リスト<small>ITEM LIST</small></span></a>
+    <a href="#roomitems" class="toc-item"><span class="toc-num">5</span><span class="toc-label">室内販売<small>ROOM ITEMS</small></span></a>
+    <a href="#checkout" class="toc-item"><span class="toc-num">6</span><span class="toc-label">チェックアウト<small>CHECK OUT</small></span></a>
+    <a href="#rules" class="toc-item"><span class="toc-num">7</span><span class="toc-label">注意事項<small>ATTENTION</small></span></a>
+    <a href="#faq" class="toc-item"><span class="toc-num">8</span><span class="toc-label">よくある質問<small>FAQ</small></span></a>
+    <a href="#info" class="toc-item"><span class="toc-num">9</span><span class="toc-label">お問い合わせ<small>INQUIRY</small></span></a>
+  </div>
+</div>
+
+<!-- Highlight Cards -->
+<div class="info-highlight-cards">
+  <div class="highlight-card">
+    <div class="hc-icon">&#128274;</div>
+    <div class="hc-title">CHECK IN</div>
+    <div class="hc-value">15:00 ~</div>
+  </div>
+  <div class="highlight-card">
+    <div class="hc-icon">&#128682;</div>
+    <div class="hc-title">CHECK OUT</div>
+    <div class="hc-value">~ 11:00</div>
+  </div>
+  <div class="highlight-card">
+    <div class="hc-icon">&#128246;</div>
+    <div class="hc-title">Wi-Fi</div>
+    <div class="hc-value">itadorisauna<small>PW: itadorisauna</small></div>
+  </div>
+</div>
+
+<div class="info-section">
+
+<!-- ==================== 1. CHECK IN ==================== -->
+<section id="checkin" class="content-section active section-accordion open">
+  <div class="section-accordion-header" onclick="toggleSection(this)">
+    <div>
+      <div class="sec-label">CHECK IN</div>
+      <div class="sec-title">チェックイン</div>
+    </div>
+    <span class="sec-toggle">+</span>
+  </div>
+  <div class="section-accordion-body">
+    <div>
+      <h3>スマートチェックイン</h3>
+      <p>ようこそ板取へ。YOHAKUでは、静かな滞在を大切にするため、非対面のスマートチェックインを採用しています。</p>
+      <div class="horizontal-scroll">
+        <div class="card">
+          <h4>1</h4>
+          <img src="image/checkin-1.jpeg" loading="lazy" alt="checkinの方法" />
+          <p>チェックイン当日に【チェックイン案内】を登録のメールアドレスにお送りします。
+            <br>届かない場合は迷惑メールに振り分けられている場合がります。公式LINEにお問い合わせください。
+          </p>
+        </div>
+        <div class="card">
+          <h4>2</h4>
+          <img src="image/checkin-2.jpeg" loading="lazy" alt="checkinの方法" />
+          <p>玄関前で【チェックイン案内】メールのチェックインフォームから宿泊者情報を<b>全員が入力してください。</b>
+            <br><span>※宿泊する皆様入力をお願いいたします。</span></p>
+        </div>
+        <div class="card">
+          <h4>3</h4>
+          <img src="image/checkin-3.jpeg" loading="lazy" alt="checkinの方法" />
+          <p>【チェックイン案内】メールに記載してある、「6桁の暗証番号」玄関のテンキーにを入力し、解錠ボタンを押してください。
+            <br><span>※暗証番号は滞在中有効です。</span></p>
+        </div>
+        <div class="card">
+          <h4>4</h4>
+          <img src="image/checkin-4.jpg" loading="lazy" alt="checkinの方法" />
+          <p>このページの利用案内をご確認ください。サウナや設備の利用方法などYOHAKUでの過ごし方が記載されています。</p>
+        </div>
+      </div>
+    </div>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9kS2skYJq/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9kS2skYJq/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9kS2skYJq/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+  </div>
+</section>
+
+<!-- ==================== 2. YOHAKU (客室の使い方) ==================== -->
+<section id="yohaku" class="content-section active section-accordion open">
+  <div class="section-accordion-header" onclick="toggleSection(this)">
+    <div>
+      <div class="sec-label">YOHAKU</div>
+      <div class="sec-title">客室の使い方</div>
+    </div>
+    <span class="sec-toggle">+</span>
+  </div>
+  <div class="section-accordion-body">
+    <img src="image/yohaku-1.jpeg" loading="lazy" alt="YOHAKUの写真" class="section-hero-img">
+
+    <!-- Wi-Fi -->
+    <div class="sub-accordion open" id="wi-fi">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>Wi-Fiのご案内</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>YOHAKU内ではWi-Fiをご利用いただけます。
+          <br>PC作業や映画鑑賞などにもどうぞご活用ください。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/wifi-1.jpg" loading="lazy" alt="Wi-Fi" />
+            <p>ネットワーク名：itadorisauna
+              <br>パスワード：itadorisauna</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 灯油ストーブ -->
+    <div class="sub-accordion" id="stove">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>灯油ストーブの使い方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>冬季のみ灯油ストーブをご用意しています。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/rainbow-1.jpeg" loading="lazy" alt="灯油ストーブ" />
+            <p>点火ダイヤルを「カチカチ」と音を立てながら、ゆっくり完全に止まるまで回してください。</p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/rainbow-2.jpeg" loading="lazy" alt="灯油ストーブ" />
+            <p>「ピィー」という放電音がするまで回してください。(点火します)
+              <br>火が着いたことを確認したら、しん調節つまみから手をゆっくりはなしてください。
+              <br><span>※点火しない場合は、扉を開けて、外炎筒つまみを持ち上げ、マッチまたはチャッカマンを使ってしんに火を着けてください。</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/rainbow-3.jpeg" loading="lazy" alt="灯油ストーブ" />
+            <p>炎が安定したら、ダイヤルを左に回して芯を少し下げ、火力を弱めます。
+              <br>虹色の炎が見え始めたら適正な状態です。
+            </p>
+          </div>
+          <div class="card">
+            <h4>4</h4>
+            <img src="image/rainbow-4.jpeg" loading="lazy" alt="灯油ストーブ" />
+            <p>黒い煙が出たら酸素不足のサイン。換気を良くし、芯を少し下げて火力を弱めてください。
+               <br><span>※燃焼筒がズレていると異常燃焼を起こし、火災の原因になるおそれがあります。</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>5</h4>
+            <img src="image/rainbow-5.jpeg" loading="lazy" alt="灯油ストーブ" />
+            <p>消火位置（左方向）にゆっくり回し、止まる位置で停止させます。
+               <br><span>※お部屋を出る際や就寝時など、目を離す場合は必ず消火してください。</span>
+            </p>
+          </div>
+        </div>
+        <p>※ストーブの上に物を置く行為は危険かつ故障するため禁止しております。</p>
+        <div><a href="https://www.toyotomi.jp/manual/operation/RL-2524.pdf" rel="nofollow">詳しい取扱説明書はこちら&#9654;&#65038;</a></div>
+      </div>
+    </div>
+
+    <!-- プロジェクター -->
+    <div class="sub-accordion" id="projector">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>プロジェクターの使い方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>お部屋にはプロジェクターをご用意しています。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/projector-1.jpeg" loading="lazy" alt="プロジェクター" />
+            <p>リモコンで電源を入れてください。</p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/projector-2.jpg" loading="lazy" alt="プロジェクター" />
+            <p>スピーカーの電源を入れるとBluetoothで接続されます。
+              <br><span>※詳しくは<a href="#speaker"><u>スピーカーの操作方法</u></a>をご覧ください。</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/projector-3.jpg" loading="lazy" alt="プロジェクター" />
+            <p>YouTubeやNetflixなどご自身のアカウントにログインして自然の中の"おこもり時間"をお楽しみください。
+              <br><span>※チェックアウト前にログアウトしてください。</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>4</h4>
+            <img src="image/projector-4.jpg" loading="lazy" alt="台形補正画面の写真" />
+            <p>画面の歪みが気になる場合は[設定→台形補正]で手動で画角を調整してください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- スピーカー -->
+    <div class="sub-accordion" id="speaker">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>スピーカーの使い方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>Bluetoothスピーカーを自由にご利用いただけます。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/speaker-1.jpg" loading="lazy" alt="スピーカー" />
+            <p>電源ボタンを長押ししてON</p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/speaker-2.jpg" loading="lazy" alt="ペアリングボタンのアップ写真" />
+            <p>Bluetoothペアリングボタンを押して、お手持ちのスマートフォンからBluetoothで「Bose Flex 2 SoundLink」に接続</p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/speaker-3.jpg" loading="lazy" alt="スピーカー" />
+            <p>静かな時間と心地よい音楽をお楽しみください
+              <br><span>※夜間の外でのご利用はボリュームを控えめにお願いします。</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 羽釜 -->
+    <div class="sub-accordion" id="rice">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>羽釜でごはんを炊く</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>自然と相性抜群の羽釜ごはん、ぜひ体験してみてください。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/hagama-1.avif" loading="lazy" alt="羽釜" />
+            <p>よく研いだお米と水を羽釜に入れ、30分つけておく。
+              <br><span>目安：1合につき180mlの水</span></p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/hagama-2.jpg" loading="lazy" alt="羽釜" />
+            <p>強火で火にかけ、沸騰したら弱火にする。</p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/hagama-3.avif" loading="lazy" alt="羽釜" />
+            <p>極弱火にして各合数分の時間火にかける。
+              <br>1合：13分　2合：16分　3合：20分
+            </p>
+          </div>
+          <div class="card">
+            <h4>4</h4>
+            <img src="image/hagama-4.avif" loading="lazy" alt="羽釜" />
+            <p>火を止めて、蓋をしたまま15分間蒸らして出来上がり。</p>
+          </div>
+        </div>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9kDz1EXoM/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9kDz1EXoM/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9kDz1EXoM/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+    <!-- ケトル -->
+    <div class="sub-accordion" id="kettle">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>ケトルの使い方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/kettle-1.jpg" loading="lazy" alt="ケトル" />
+            <p>本体に水を入れ、温度調整ダイヤルを回して温度を設定する。
+              <br><span>「START」ボタンを押して電源を入れ、右側のダイヤルで好みの温度に設定します。</span></p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/kettle-2.jpg" loading="lazy" alt="ケトル" />
+            <p>「START」ボタンを押して湯沸かしを開始する。
+              <br><span>「START」ボタンを押して湯沸かしを開始します。設定温度まで温まると、リングライトと音でお知らせします。</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/kettle-3.jpg" loading="lazy" alt="ケトル" />
+            <p>湯沸かし前、湯沸かし中、湯沸かし完了後（5分以内）に「KEEP」ボタンを押すと30分間の保温ができます。</p>
+          </div>
+        </div>
+        <p>※直火やストーブの上に置く行為は危険かつ故障するため禁止しております。</p>
+      </div>
+    </div>
+
+    <!-- コーヒー -->
+    <div class="sub-accordion" id="coffee">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>コーヒーの淹れ方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>朝の静かな時間に、自分で淹れる一杯のコーヒー。自然の中で味わうだけで、特別な時間になります。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/coffee-7.jpeg" loading="lazy" alt="コーヒー" />
+            <p>冷蔵庫の中に、無料でお使いいただけるコーヒー豆をご用意しております（専用ボトル入り）。お好みの分量を計って、手挽きミルに入れてご使用ください。
+              <span><br>【豆の量】
+                <br>コーヒー1杯：ボトルのフタ2杯
+              <br>コーヒー2杯：ボトルのフタ4杯
+            <br>※ボトルを傾けると、キャップ1杯で約0.5杯分の豆が計量できます。</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/coffee-1.jpg" loading="lazy" alt="コーヒー" />
+            <p>手挽きミルで、コーヒー豆をゴリゴリと挽いてください。中挽き程度がおすすめです。</p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/coffee-2.jpg" loading="lazy" alt="コーヒー" />
+            <p>セラミックフィルターをドリッパーにセットし、挽いた豆を入れます。目安は1杯あたり約15g（スプーン1.5杯強）です。
+              <br><span>※紙フィルター不要の環境に優しいドリッパーです</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>4</h4>
+            <img src="image/coffee-3.jpg" loading="lazy" alt="コーヒー" />
+            <p>少量のお湯（約30ml）を豆全体にまんべんなく注ぎ、1分ほど蒸らします。コーヒーの香りがふわっと立ち上がる瞬間です。</p>
+          </div>
+          <div class="card">
+            <h4>5</h4>
+            <img src="image/coffee-4.webp" loading="lazy" alt="コーヒー" />
+            <p>数回に分けて、ゆっくりと残りのお湯を注いでいきます。コーヒーサーバーのメモリを目安にお湯の量を調整してください。
+              <span><br>1杯：お湯 約240ml
+              <br>2杯：お湯 約480ml</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>6</h4>
+            <img src="image/coffee-5.webp" loading="lazy" alt="コーヒー" />
+            <p>ドリップが終わったら、カップに注いで完成です。木漏れ日と川のせせらぎとともに、ゆったりとした時間と共に味わってください。</p>
+          </div>
+          <div class="card">
+            <h4>7</h4>
+            <img src="image/coffee-6.jpg" loading="lazy" alt="コーヒー" />
+            <p>ドリップ後のセラミックフィルターに残ったコーヒー豆は、そのまま「燃えるゴミ」として捨ててください。
+              <br><span>※使用済みコーヒー豆には消臭効果があります。</span>
+            </p>
+          </div>
+        </div>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9j-jokeGB/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9j-jokeGB/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9j-jokeGB/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+    <!-- BBQ -->
+    <div class="sub-accordion" id="bbq">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>BBQグリルの使い方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>仲間とゆっくり、自然の中でBBQをお楽しみください。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/bbq-1.jpg" loading="lazy" alt="BBQグリルの使い方" />
+            <p>BBQグリルはウッドデッキに設置済みです。</p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/bbq-2.webp" loading="lazy" alt="BBQグリルの使い方" />
+            <p>火力調整スイッチをひねって、赤色の点火ボタンを押して着火します。</p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/bbq-6.jpeg" loading="lazy" alt="BBQグリルの使い方" />
+            <p>点火ボタンでつかないときは、チャッカマンで点火してください。
+              <span><br>火力調整スイッチをひねった状態でチャッカマンで点火ができます。</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>4</h4>
+            <img src="image/bbq-3.jpg" loading="lazy" alt="BBQグリルの使い方" />
+            <p>グリルの鉄板が熱くなってきたら、焼き始められます。</p>
+          </div>
+          <div class="card">
+            <h4>5</h4>
+            <img src="image/bbq-4.jpg" loading="lazy" alt="BBQグリルの使い方" />
+            <p>使用後は火力調整スイッチをひねって、火を必ず消してください。</p>
+          </div>
+          <div class="card">
+            <h4>6</h4>
+            <img src="image/bbq-5.jpg" loading="lazy" alt="BBQグリルの使い方" />
+            <p>ガスが切れたら、火力調整スイッチを「消」の位置までひねり、コンロ背面のガス缶を回して外し、新しいガス缶に付け替えてください。
+              <span><br>安全のため、必ずスイッチを消してから交換してください。
+                <br>※ガスの使い切りにご協力お願いします</span>
+            </p>
+          </div>
+        </div>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9kmzzkaiJ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9kmzzkaiJ/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9kmzzkaiJ/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+    <!-- ゴミ分別 -->
+    <div class="sub-accordion" id="gomi">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>ゴミの分別方法</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>ゴミはキッチンのダストボックスに分別して捨ててください。
+          <br>※分別ルールは地域と連携しています。ご協力お願いします！</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/gomi-1.jpg" loading="lazy" alt="ゴミの分別方法" />
+            <p>可燃ごみ（生ごみ、紙、ペットボトルなど）</p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/gomi-2.jpeg" loading="lazy" alt="ゴミの分別方法" />
+            <p>缶・瓶
+              <br><span>飲み残しの飲料は、洗面台に流して捨ててください。</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 食器洗い -->
+    <div class="sub-accordion" id="dishes">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>調理器具・食器類の洗い方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>自然と共存する施設のため、できるだけ洗剤の量は控えめにしていただけると嬉しいです。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/nagashi-1.jpg" loading="lazy" alt="洗い方" />
+            <p>ご使用後の調理器具・食器類は、洗わずそのまま【回収ボックス】へお戻しください。
+              <br>後片付けはこちらで行いますので、どうぞゆっくりお過ごしください。
+            <br><span>※油汚れがひどい場合は、キッチンペーパーなどで軽く拭き取ってから入れてください。</span></p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/nagashi-2.jpg" loading="lazy" alt="スポンジと洗剤のアップ写真" />
+            <p>夜や朝に軽く洗いたい場合は、室内の洗面所を簡易洗い場としてご利用いただけます。
+              <br>洗剤・スポンジ・水切りバスケットは洗面所にございます。
+              <br><span>※自然に優しい洗剤をご用意しております</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/nagashi-3.jpg" loading="lazy" alt="洗い方" />
+            <p>油汚れがひどい場合は、キッチンペーパーなどで軽く拭き取ってから洗っていただけると助かります。
+              <br>流しの詰まり防止や、自然環境への配慮にご協力をお願いします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 川遊び -->
+    <div class="sub-accordion" id="river">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>川遊びについて</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>YOHAKUでは、目の前を流れる清らかな板取川でもお楽しみいただけます。自然を満喫しながら、安全に遊んでいただくため、以下のルールをお守りください。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/river-1.JPG" loading="lazy" alt="ライフジャケット" />
+            <p>川に入る際は、必ずライフジャケットをご着用ください。</p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/river-2.JPG" loading="lazy" alt="ライフジャケット" />
+            <p>ライフジャケットは無料でお貸し出ししております。サイズに応じてお選びいただけます。
+              <br><span><!--川への降り口にライフジャケット・サンダル置き場がございます--></span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/river-3.jpeg" loading="lazy" alt="降り口小道の写真" />
+            <p>敷地沿いの小道を下っていくと、川への降り口があります。</p>
+          </div>
+          <div class="card">
+            <h4>4</h4>
+            <img src="image/river-4.jpg" loading="lazy" alt="サンダル" />
+            <p>石段や斜面がある箇所もございますので、滑りにくいサンダルや靴でお進みください。</p>
+          </div>
+          <div class="card">
+            <h4>5</h4>
+            <img src="image/river-5.jpeg" loading="lazy" alt="遊泳禁止看板の写真" />
+            <p>増水時には降り口に遊泳禁止看板を設置しております。遊泳禁止看板がある場合は、絶対に川に入らないでください。
+              <br><span>※川に降りていただくことは可能です。ぜひ河原を散歩してください。</span>
+            </p>
+          </div>
+        </div>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9jSI7EewL/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9jSI7EewL/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9jSI7EewL/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+    <!-- 焙き火 -->
+    <div class="sub-accordion" id="takibi">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>焙き火について</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>焙き火も、YOHAKUでの大切な"癒しの時間"のひとつ。何もせず、ただ火を見つめるだけの時間が、思いがけず深い余白になります。</p>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <h4>1</h4>
+            <img src="image/takibi-1.jpg" loading="lazy" alt="焙き火" />
+            <p>焙き火は焙き火台のみでご利用いただけます。直火は禁止です。
+              <br><span>※焙き火台は設置されている場所から移動しないでください。
+                <br>※風の強い日や乾燥注意報発令時は、安全のため使用を制限させていただく場合があります</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>2</h4>
+            <img src="image/takibi-2.jpg" loading="lazy" alt="焙き火" />
+            <p>薪は場内の「薪棚」からお持ちください。 </p>
+          </div>
+          <div class="card">
+            <h4>3</h4>
+            <img src="image/takibi-3.jpeg" loading="lazy" alt="着火剤・チャッカマン・薪の写真" />
+            <p>テントサウナに準備してある【着火剤・チャッカマン・薪】を使って火をつけてください。</p>
+          </div>
+          <div class="card">
+            <h4>4</h4>
+            <img src="image/takibi-4.jpg" loading="lazy" alt="焙き付け薪・本薪の写真" />
+            <p>薪の太さの目安：
+              <br>・本薪（通常の薪）：拳くらいの太さ
+              <br>・焙き付け用（着火用の細薪）：手で折れるくらいの細さ
+              <br><span>※火のつきやすさや持続時間を考えて、用途に応じた太さでご用意ください</span>
+            </p>
+          </div>
+          <div class="card">
+            <h4>5</h4>
+            <img src="image/takibi-5.jpg" loading="lazy" alt="焙き火" />
+            <p>焙き火の火で暖を取ったり、火のゆらぎを楽しんだりと、自然の中での特別な時間をお過ごしください。</p>
+          </div>
+        </div>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9i5q3kRcV/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9i5q3kRcV/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9i5q3kRcV/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+    <!-- タープ -->
+    <div class="sub-accordion" id="tarp">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>タープの使い方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>雨の日や日差しが気になる場合はタープをご利用ください。</p>
+        <div class="horizontal-scroll">
+          <div class="card"><h4>1</h4><img src="image/tarp-1.jpeg" loading="lazy" alt="タープ" /><p>No.1棟の横にある倉庫にタープが収納されています。風対策用のウエイトは、各棟のデッキ下に保管されています。</p></div>
+          <div class="card"><h4>2</h4><img src="image/tarp-2.jpeg" loading="lazy" alt="タープ" /><p>四隅の脚を少し広げた状態で、タープの内側に入り、中央の丸い部分を上に押し上げてください。</p></div>
+          <div class="card"><h4>3</h4><img src="image/tarp-3.jpeg" loading="lazy" alt="タープ" /><p>中央の丸い部分が「カチッ」と音を立てて固定されれば、タープ本体の設置は完了です。</p></div>
+          <div class="card"><h4>4</h4><img src="image/tarp-4.jpeg" loading="lazy" alt="タープ" /><p>4本の脚を、必要な高さまで順番に伸ばしてください。</p></div>
+          <div class="card"><h4>5</h4><img src="image/tarp-5.jpeg" loading="lazy" alt="タープ" /><p>各脚にウエイトバッグを取り付けます。<br>・ウエイトのつまみを回して外す<br>・タープの脚を挟むように取り付ける<br>・つまみを回してしっかり固定する</p></div>
+          <div class="card"><h4>6</h4><img src="image/tarp-6.jpeg" loading="lazy" alt="タープ" /><p>使い終わったら、上記の手順を逆にたどって収納してください。タープ・ウエイトともに、元の場所に戻すようお願いします。</p></div>
+          <div class="card"><h4>7</h4><img src="image/tarp-7.jpeg" loading="lazy" alt="タープ" /><p>中央の赤いボタンを押すとロックが外れ、タープを折りたたむことができます。</p></div>
+        </div>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9jvjakeo1/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9jvjakeo1/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9jvjakeo1/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+  </div><!-- /section-accordion-body -->
+</section><!-- /yohaku -->
+
+<!-- ==================== 3. SAUNA ==================== -->
+<section id="sauna" class="content-section active section-accordion open">
+  <div class="section-accordion-header" onclick="toggleSection(this)">
+    <div>
+      <div class="sec-label">SAUNA</div>
+      <div class="sec-title">サウナの使い方</div>
+    </div>
+    <span class="sec-toggle">+</span>
+  </div>
+  <div class="section-accordion-body">
+    <img src="image/sauna-1.jpeg" loading="lazy" alt="サウナストーブの写真" class="section-hero-img">
+
+    <!-- 火入れ -->
+    <div class="sub-accordion open" id="fire">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>サウナの火入れ</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>YOHAKUではお客様ご自身で薪ストーブに火を焚き、サウナを楽しんでいただきます。</p>
+        <div class="horizontal-scroll">
+          <div class="card"><h4>1</h4><img src="image/fire-1.jpeg" loading="lazy" alt="着火剤・チャッカマン・薪の写真" /><p>室内の銀色のボックスに【着火剤・マッチ・チャッカマン】をご用意しています。<br>薪はご自身で割っていただきます。普段はなかなか体験できない「薪割り」からの火入れをぜひお楽しみください。</p></div>
+          <div class="card"><h4>2</h4><img src="image/fire-2.jpeg" loading="lazy" alt="焙き付けに着火した後の写真" /><p>はじめにマッチ・チャッカマンで着火剤に火をつけ、細い薪から燃やします。徐々に太い薪を足していくとスムーズに火が育ちます。<br><span>※焙き付け用（着火用の細薪）：手で折れるくらいの細さに割りましょう</span></p></div>
+          <div class="card"><h4>3</h4><img src="image/fire-3.jpeg" loading="lazy" alt="焙き付けから太い薪に燃え移る写真" /><p>火が安定するまでに10〜20分ほどかかる場合があります。</p></div>
+          <div class="card"><h4>4</h4><img src="image/fire-4.jpg" loading="lazy" alt="火入れ" /><p>サウナ中は20分に1本程度薪を入れましょう。ストーブの中に薪が4本程度ある状態をキープしてください。<br><span>※炎が上がっている時に新しい薪を入れるのがポイントです</span></p></div>
+        </div>
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9gcG0kSAl/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9gcG0kSAl/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9gcG0kSAl/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+    <!-- 薪割り -->
+    <div class="sub-accordion" id="makiwari">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>薪の割り方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>YOHAKUでは、薪割りもひとつのアクティビティ。普段の生活では味わえない、自然と向き合う時間をお楽しみください。</p>
+        <div class="horizontal-scroll">
+          <div class="card"><h4>1</h4><img src="image/maki-1.jpg" loading="lazy" alt="薪" /><p>薪は、場内入り口にある「薪棚」からお持ち運びください。<br><span>※テントサウナ内に「薪バッグ」をご用意しております。</span></p></div>
+          <div class="card"><h4>2</h4><img src="image/maki-2.jpeg" loading="lazy" alt="薪割り台とハンマーの写真" /><p>薪を割る際は、テントサウナ横に設置してある「薪割り台」をご利用ください。<br><span>※安全に十分ご注意のうえ、ご使用をお願いします</span></p></div>
+          <div class="card"><h4>3</h4><img src="image/maki-3.jpg" loading="lazy" alt="薪" /><p>薪は、薪割り台の中央にしっかりとセットし、ハンマーで真上からまっすぐ叩いてください。<br><span>※ケガ防止のため、グローブをして作業してください。</span></p></div>
+          <div class="card"><h4>4</h4><img src="image/maki-4.jpg" loading="lazy" alt="焙き付け薪・本薪の写真" /><p>薪の太さの目安：<br>・本薪（通常の薪）：拳くらいの太さ<br>・焙き付け用（着火用の細薪）：手で折れるくらいの細さ<br><span>※火のつきやすさや持続時間を考えて、用途に応じた太さでご用意ください</span></p></div>
+        </div>
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9gR29kZZA/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9gR29kZZA/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9gR29kZZA/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+    <!-- スチームジェネレーター -->
+    <div class="sub-accordion" id="steam">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>スチームジェネレーターの使い方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <p>蒸気が変える、サウナの未来へ。粒度の細かい加熱水蒸気を発生させ、サウナ室全体に熱と潤いを行き渡らせる設計の専用ストーブを堆能してください。</p>
+        <div class="horizontal-scroll">
+          <div class="card"><h4>1</h4><img src="image/stove-1.jpg" loading="lazy" alt="羽釜・タンクに水を入れる様子の写真" /><p>使用前に、ストーブの六角形のタンクに十分に水を入れてください。<br><span>※「満水弱（8〜9分目）」を目安に入れてください</span></p></div>
+          <div class="card"><h4>2</h4><img src="image/stove-2.jpg" loading="lazy" alt="ジョウロで水を追加する写真" /><p>ストーブ前方のサウナストーンに、ゆっくりロウリュをして蒸気をお楽しみください。<br><span>※かけすぎると温度が下がる場合があります。5分に1回程度を目安に、蒸気と熱の広がりを感じてください。</span></p></div>
+          <div class="card"><h4>3</h4><img src="image/stove-3.jpeg" loading="lazy" alt="タンクが空の写真" /><p>タンクの水が切れると「空焚き」となり、非常に危険です。火災や機器の故障の原因になりますので、必ず水を補給してください。</p></div>
+          <div class="card"><h4>4</h4><img src="image/stove-4.jpg" loading="lazy" alt="タンクが満水になっている写真" /><p>終了時は、必ず六角形のタンクの水を満タンに補給してから退室をお願いします。<br><span>※薪ストーブに残った火によって、空焚きになるおそれがあります</span></p></div>
+        </div>
+        <p>※説明動画撮影時からロウリュができるように仕様が変更されています。</p>
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9gsmGEZi6/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9gsmGEZi6/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9gsmGEZi6/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+    <!-- 一酸化炭素チェッカー -->
+    <div class="sub-accordion" id="checker">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>一酸化炭素チェッカーについて</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <div class="horizontal-scroll">
+          <div class="card"><h4>1</h4><img src="image/checker-1.png" loading="lazy" alt="一酸化炭素チェッカー" /><p>一酸化炭素チェッカーはテントサウナ内の網のポケットに入っています。火入れの際に、電源ボタンを長押しして起動してください。<br>ご利用後は、同じく電源ボタンを長押しして電源をお切りください。<br><span>万が一、一酸化炭素チェッカーが音が鸣ったらすぐにサウナから外に出てください。公式LINEへご連絡をお願いします。</span></p></div>
+        </div>
+        <div class="horizontal-box">
+          <h4>こんな時どうする？</h4>
+          <h5>⚫︎サウナの温度が上がらない</h5>
+          <p>→薪は入れすぎず、炎がしっかり上がってから追加しましょう。最初は細めの薪から入れると火がつきやすく、火力が安定してから太めの薪をくべるのがおすすめです。</p>
+          <h5>⚫︎サウナの中が煙たい</h5>
+          <p>→まずサウナの扉を全開にして外に出ましょう。ストーブの扉が閉まっていることを確認してください。</p>
+          <h5>⚫︎サウナが熱くなりすぎた</h5>
+          <p>→薪を入れず、サウナ室の扉をしばらく開けて部屋の温度を下げましょう。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 水風呂 -->
+    <div class="sub-accordion" id="mizuburo">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>水風呂の楽しみ方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <div class="horizontal-scroll">
+          <div class="card"><h4>1</h4><img src="image/oke-1.jpg" loading="lazy" alt="水風呂" /><p>蛇口をひねって【浴槽に水を貯めて】ください（満水まで約15〜20分）。</p></div>
+          <div class="card"><h4>2</h4><img src="image/oke-2.jpeg" loading="lazy" alt="蛇口を止める手元の写真" /><p>満水になったら蛇口を閉めてください。この場所は、自然に囲まれた貴重な環境にあります。そのため、水はとても大切な資源です。<br><span>※ご滞在中は、節水にご協力をお願いいたします。</span></p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 外気浴 -->
+    <div class="sub-accordion" id="gaikiyoku">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>外気浴の楽しみ方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <div class="horizontal-scroll">
+          <div class="card"><h4>1</h4><img src="image/poncho-1.png" loading="lazy" alt="ポンチョ" /><p>体が濡れたままだと急激に冷えてしまいます。まずはしっかりタオルで体を拭きましょう。</p></div>
+          <div class="card"><h4>2</h4><img src="image/poncho-2.png" loading="lazy" alt="タオル" /><p>ポンチョを羽織ると体の芯からのポカポカとした熱を感じられます。肩から膝まで包み込んで、体温を保ちましょう。</p></div>
+          <div class="card"><h4>3</h4><img src="image/poncho-3.png" loading="lazy" alt="インフィニティチェア" /><p>Lafuma（ラフマ）チェアに深く座り、目を閉じてください。川の音、風の匂い、光のゆらぎ。自然を全身で感じてください。</p></div>
+          <div class="card"><h4>4</h4><img src="image/poncho-4.png" loading="lazy" alt="ととのう" /><p>水風呂から出た2分間は"ととのい"のゴールデンタイム。深い呼吸とともに、全身の血流とともにリラックスが訪れます。</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- チェア -->
+    <div class="sub-accordion" id="chair">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>Lafuma（ラフマ）リクライニングチェアの使い方</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <div class="horizontal-scroll">
+          <div class="card"><h4>1</h4><img src="image/chair-1.jpg" loading="lazy" alt="ラフマの写真" /><p>Lafuma（ラフマ）リクライニングチェアはNASAが考案した「ゼログラヴィティ（無重力）」姿勢理論が導入されています。心地よい体制を徹底的に追求されたサウナにベストなチェアです。</p></div>
+          <div class="card"><h4>2</h4><img src="image/chair-2.jpeg" loading="lazy" alt="ラフマを倒した写真" /><p>背もたれの方に体重をかけると、背もたれが倒れ、リクライニングします。<br><span>※深く座ると後ろに倒れやすくなります。</span></p></div>
+          <div class="card"><h4>3</h4><img src="image/chair-3.jpg" loading="lazy" alt="ラフマの写真" /><p>両側のレバーを回すとリクライニングにロックがかかります。</p></div>
+          <div class="card"><h4>4</h4><img src="image/chair-4.jpeg" loading="lazy" alt="リクライニングして寝ている写真" /><p>リクライニングのロックを解除してご利用ください。</p></div>
+        </div>
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DS9jgKUEZLv/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DS9jgKUEZLv/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DS9jgKUEZLv/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">YOHAKU｜ITADORI SAUNAが手がける宿(@yohaku_itadorisauna)がシェアした投稿</a></p></div></blockquote>
+      </div>
+    </div>
+
+    <!-- 片付け -->
+    <div class="sub-accordion" id="saunaend">
+      <div class="sub-accordion-header" onclick="toggleSub(this)">
+        <h3>サウナが終わったら</h3>
+        <span class="sub-toggle">+</span>
+      </div>
+      <div class="sub-accordion-body">
+        <div class="horizontal-scroll">
+          <div class="card"><h4>1</h4><img src="image/end-1.jpeg" loading="lazy" alt="終わりの写真" /><p>ストーブの扉を閉めてください。<br><span>火が完全に消えるまでは開けっ放しにしない。</span></p></div>
+          <div class="card"><h4>2</h4><img src="image/end-2.jpg" loading="lazy" alt="タンクが満水になっている写真" /><p>ストーブの六角形のタンクに必ず水を満タンに補給してから退室をお願いします。<br><span>※薪ストーブに残った火によって、空焚きになるおそれがあります</span></p></div>
+          <div class="card"><h4>3</h4><img src="image/end-3.jpg" loading="lazy" alt="サウナの扉を閉める手元の写真" /><p>テントサウナの扉は、必ずしっかりと閉めてください。<br><span>※開けっぱなしですと、風で飛ばされる恐れがあります</span></p></div>
+          <div class="card"><h4>4</h4><img src="image/end-4.jpeg" loading="lazy" alt="蛇口を止める手元の写真" /><p>水風呂の蛇口をしっかり閉めてください。</p></div>
+        </div>
+        <p>最後まで気持ちよく使っていただくために、ひと手間のご協力をお願いします。自然の中でのサウナ体験が、あなたの心と体を整える時間になりますように。</p>
+      </div>
+    </div>
+
+  </div><!-- /section-accordion-body -->
+</section><!-- /sauna -->
+
+<!-- ==================== 4. ITEM LIST ==================== -->
+<section id="itemlist" class="content-section active section-accordion open">
+  <div class="section-accordion-header" onclick="toggleSection(this)">
+    <div>
+      <div class="sec-label">ITEM LIST</div>
+      <div class="sec-title">備品リスト</div>
+    </div>
+    <span class="sec-toggle">+</span>
+  </div>
+  <div class="section-accordion-body">
+
+    <!-- KITCHEN -->
+    <h3 style="font-weight: 400; font-size: 3rem; margin-top: 40px; margin-bottom: 0; color: #c5b98f; border-bottom: none;">KITCHEN</h3>
+    <h4 style="font-size: 1rem; font-weight: 400;">キッチン＆BBQ</h4>
+    <img src="image/item-1.jpg" loading="lazy" alt="キッチン" width="100%" style="object-fit: cover; border-radius: 12px;">
+    <div class="itemlist">
+      <h5>調理家電</h5>
+      <p>オーブンレンジ</p><p>冷蔵庫</p><p>販売専用冷蔵庫</p><p>電気ケトル</p><p>カセットコンロ</p><p>BBQコンロ</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>調理用品</h5>
+      <p>羽釜</p><p>フライパン（大・中）</p><p>鍋</p>
+    </div>
+    <img src="image/item-2.jpg" loading="lazy" alt="キッチン" width="100%" style="object-fit: cover; margin-top: 80px; border-radius: 12px;">
+    <div class="itemlist">
+      <h5>コーヒーセット</h5>
+      <p>コーヒーミル</p><p>コーヒードリッパー</p><p>コーヒーサーバー</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>調理器具</h5>
+      <div class="itemlist_box">
+        <div class="itemlist_box_1">
+          <p>まな板</p><p>包丁</p><p>ピーラー</p><p>キッチンバサミ</p><p>フライ返し</p><p>おたま</p><p>トング</p><p>しゃもじ</p>
+        </div>
+        <div class="itemlist_box_1">
+          <p>菜箸</p><p>鍋つかみ</p><p>鍋敷き</p><p>ワインオープナー</p><p>クッキングシート</p><p>サランラップ</p><p>アルミホイル</p><p>キッチンペーパー</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>その他</h5>
+      <p>水切りかご</p><p>食器拭き、台拭き、手拭き</p><p>分別用ごみ箱</p><p>救急箱</p>
+    </div>
+    <img src="image/item-3.webp" loading="lazy" alt="キッチン" width="100%" style="object-fit: cover; margin-top: 80px; border-radius: 12px;">
+    <div class="itemlist">
+      <h5>食器</h5>
+      <p>平皿(大・中)</p><p>ボウル皿</p><p>スープカップ</p><p>マグカップ</p><p>ワイングラス</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>カトラリー</h5>
+      <p>スプーン</p><p>フォーク</p><p>ナイフ</p><p>箸</p>
+    </div>
+
+    <!-- BEDROOM -->
+    <h3 style="font-weight: 400; font-size: 3rem; margin-bottom: 0; margin-top: 100px; color: #c5b98f; border-bottom: none;">BEDROOM</h3>
+    <h4 style="font-size: 1rem; font-weight: 400;">寝室</h4>
+    <img src="image/item-4.jpg" loading="lazy" alt="寝室" width="100%" style="object-fit: cover; border-radius: 12px;">
+    <div class="itemlist">
+      <h5>寝具</h5>
+      <p>クイーンサイズベッド×2</p><p>掛け布団</p><p>枕</p>
+    </div>
+
+    <!-- SANITARY -->
+    <h3 style="font-weight: 400; font-size: 3rem; margin-bottom: 0; margin-top: 100px; color: #c5b98f; border-bottom: none;">SANITARY</h3>
+    <h4 style="font-size: 1rem; font-weight: 400;">シャワー・洗面</h4>
+    <img src="image/item-5.jpeg" loading="lazy" alt="シャワー" width="100%" style="object-fit: cover; border-radius: 12px;">
+    <div class="itemlist">
+      <h5>水回り設備</h5>
+      <p>シャワー</p><p>トイレ</p><p>洗面台</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>アメニティ</h5>
+      <p>シャンプー</p><p>コンディショナー</p><p>ボディーソープ</p><p>ハンドソープ</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>洗面設備</h5>
+      <p>ドライヤー</p><p>歯ブラシ</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>タオル</h5>
+      <p>バスタオル</p><p>フェイスタオル</p><p>バスマット</p>
+    </div>
+
+    <!-- LIVING -->
+    <h3 style="font-weight: 400; font-size: 3rem; margin-bottom: 0; margin-top: 100px; color: #c5b98f; border-bottom: none;">LIVING</h3>
+    <h4 style="font-size: 1rem; font-weight: 400;">リビング</h4>
+    <img src="image/item-6.jpg" loading="lazy" alt="リビング" width="100%" style="object-fit: cover; border-radius: 12px;">
+    <div class="itemlist">
+      <h5>プロジェクターセット</h5>
+      <p>プロジェクター</p><p>スピーカー</p><p>スクリーン</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>空調</h5>
+      <p>エアコン・リモコン</p><p>サーキュレーター</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>その他</h5>
+      <p>WiFi</p><p>ティッシュボックス</p>
+    </div>
+
+    <!-- SAUNA -->
+    <h3 style="font-weight: 400; font-size: 3rem; margin-bottom: 0; margin-top: 100px; color: #c5b98f; border-bottom: none;">SAUNA</h3>
+    <h4 style="font-size: 1rem; font-weight: 400;">サウナ・焚き火</h4>
+    <img src="image/item-7.jpeg" loading="lazy" alt="サウナ" width="100%" style="object-fit: cover; border-radius: 12px;">
+    <div class="itemlist">
+      <h5>サウナ</h5>
+      <div class="itemlist_box">
+        <div class="itemlist_box_1">
+          <p>テントサウナ</p><p>ストーブ</p><p>バケツ</p><p>柄杓</p><p>ジョウロ</p><p>温度計</p>
+        </div>
+        <div class="itemlist_box_1">
+          <p>グローブ</p><p>火ばさみ</p><p>チャッカマン</p><p>着火剤</p><p>薪</p>
+        </div>
+      </div>
+      <p>一酸化炭素チェッカー</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>水風呂</h5>
+      <p>水風呂</p><p>落ち葉掬い</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>外気浴</h5>
+      <p>インフィニティチェア×2</p><p>チェア×2</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>サウナアメニティ</h5>
+      <p>サウナポンチョ</p><p>サウナハット</p><p>水着</p>
+      <p>サンダル
+        <br><span style="font-size:0.9rem; color: rgb(120, 120, 120);">※レンタル品のサイズは一般的なフリーサイズとなっております。極端に体格差のある方は、ご自身でのご用意をお願いいたします。</span></p>
+    </div>
+    <img src="image/item-8.jpg" loading="lazy" alt="焚き火" width="100%" style="object-fit: cover; margin-top: 80px; border-radius: 12px;">
+    <div class="itemlist">
+      <h5>焚き火</h5>
+      <p>ファイヤーピット</p>
+    </div>
+    <hr>
+    <div class="itemlist">
+      <h5>その他</h5>
+      <p>ヨガマット×2</p><p>双眼鏡</p><p>蚊取り線香</p><p>虫除けスプレー</p><p>ランタン</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== 5. ROOM ITEMS ==================== -->
+<section id="roomitems" class="content-section active section-accordion open">
+  <div class="section-accordion-header" onclick="toggleSection(this)">
+    <div>
+      <div class="sec-label">ROOM ITEMS</div>
+      <div class="sec-title">室内販売のご案内</div>
+    </div>
+    <span class="sec-toggle">+</span>
+  </div>
+  <div class="section-accordion-body">
+    <div>
+      <h3>購入方法</h3>
+      <p>YOHAKUでは、岐阜のお酒やお米、サウナドリンクをご用意しています。
+        <br>設置のQRコードよりPayPayでのセルフ決済をお願いいたします。
+      </p>
+      <div class="horizontal-scroll">
+        <div class="card">
+          <h4>1</h4>
+          <img src="image/room-1.jpeg" loading="lazy" alt="室内販売の方法" />
+          <p>販売専用の冷蔵庫に商品をご用意しております。</p>
+        </div>
+        <div class="card">
+          <h4>2</h4>
+          <img src="image/room-2.jpeg" loading="lazy" alt="室内販売の方法" />
+          <p>個数、金額をご確認のうえ、PayPayで決済をお願いいたします。
+            <br><span>※未精算が確認された場合は、チェックアウト後にご請求させていただきます</span></p>
+        </div>
+        <div class="card">
+          <h4>3</h4>
+          <img src="image/room-3.jpeg" loading="lazy" alt="室内販売の方法" />
+          <p>購入された商品は、備え付けの伝票にご記入ください。チェックアウト後、スタッフが在庫を確認します。</p>
+        </div>
+        <div class="card">
+          <h4>4</h4>
+          <img src="image/room-4.jpeg" loading="lazy" alt="室内販売の方法" />
+          <p>岐阜産の日本酒やワイン、サウナドリンクを、自然の中でどうぞご自由にお楽しみください。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 6. CHECK OUT ==================== -->
+<section id="checkout" class="content-section active section-accordion open">
+  <div class="section-accordion-header" onclick="toggleSection(this)">
+    <div>
+      <div class="sec-label">CHECK OUT</div>
+      <div class="sec-title">チェックアウト</div>
+    </div>
+    <span class="sec-toggle">+</span>
+  </div>
+  <div class="section-accordion-body">
+    <img src="image/checkout-1.jpeg" loading="lazy" alt="チェックアウトの写真" class="section-hero-img">
+    <p>ご宿泊ありがとうございました。チェックアウト前に、以下のご協力をお願いいたします。
+      <br><span>※チェックアウト時間を過ぎた場合、延長料金が発生します。(延長料金30分毎5,000円)</span></p>
+
+    <div>
+      <h3>サウナ・水風呂の片付け</h3>
+      <div class="horizontal-scroll">
+        <div class="card"><h4>1</h4><img src="image/saunaout-1.jpg" loading="lazy" alt="サウナの扉を閉める手元の写真" /><p>テントサウナの扉は、必ずしっかりと閉めてご退室ください。開けっぱなしですと、風で飛ばされる恐れがあります。</p></div>
+        <div class="card"><h4>2</h4><img src="image/saunaout-2.jpeg" loading="lazy" alt="蛇口を止める手元の写真" /><p>水風呂の蛇口をしっかりと閉めてください。</p></div>
+        <div class="card"><h4>3</h4><img src="image/saunaout-3.jpeg" loading="lazy" alt="ジョウロ、柄杓をサウナの椅子に置いた写真" /><p>バケツや桶などをご使用された場合は、水を捨ててテントサウナの中に戻してください。</p></div>
+      </div>
+    </div>
+
+    <div>
+      <h3>ゴミの片付けについて</h3>
+      <div class="horizontal-scroll">
+        <div class="card"><h4>1</h4><img src="image/gomiout-1.jpg" loading="lazy" alt="ダストボックスの写真" /><p>ゴミは【分別】のうえ、場内入り口のダストボックスへお持ちください。</p></div>
+        <div class="card"><h4>2</h4><img src="image/gomiout-2.jpg" loading="lazy" alt="ゴミを縛った写真" /><p>【燃えるゴミ・缶・瓶】に分けて、袋をしっかり縛って出してください。</p></div>
+        <div class="card"><h4>3</h4><img src="image/gomiout-3.jpg" loading="lazy" alt="ダストボックスにゴミと段ボールが入った写真" /><p>ダンボールは畳んでダストボックスに出してください。</p></div>
+      </div>
+    </div>
+
+    <div>
+      <h3>食器・調理器具の洗浄について</h3>
+      <div class="horizontal-scroll">
+        <div class="card"><h4>1</h4><img src="image/nagashiout-1.jpg" loading="lazy" alt="水切りバスケットに食器を入れた写真" /><p>ご使用後の調理器具・食器類は、洗わずそのまま【回収ボックス】へお戻しください。<br>後片付けはこちらで行いますので、どうぞゆっくりお過ごしください。</p></div>
+        <div class="card"><h4>2</h4><img src="image/nagashiout-2.jpg" loading="lazy" alt="拭く写真" /><p>油汚れのひどいものは、ペーパーなどで軽く拭き取ってから洗っていただけると助かります。<br><span>※自然と共存する施設のため、できるだけ洗剤の量は控えめにしていただけると嬉しいです</span></p></div>
+      </div>
+    </div>
+
+    <div>
+      <h3>プロジェクターのログアウト</h3>
+      <div class="horizontal-scroll">
+        <div class="card"><h4>1</h4><img src="image/projector-1.jpeg" loading="lazy" alt="プロジェクターの写真" /><p>プロジェクターご使用後はYouTubeやNetflixなどのアプリをログアウトして下さい。</p></div>
+      </div>
+    </div>
+
+    <div>
+      <h3>鍵の閉め方（スマートロック）</h3>
+      <div class="horizontal-scroll">
+        <div class="card"><h4>1</h4><img src="image/checkout-2.jpeg" loading="lazy" alt="スマートロック" /><p>チェックアウト後、【スマートキーのロックボタン】押してロックしてください。</p></div>
+        <div class="card"><h4>2</h4><img src="image/checkout-3.jpeg" loading="lazy" alt="玄関の写真" /><p>ロック音と表示を確認のうえ、施錠されているかをご確認ください。</p></div>
+      </div>
+    </div>
+
+    <p>ご協力ありがとうございます。またのお越しを心よりお待ちしております。</p>
+  </div>
+</section>
+
+<!-- ==================== 7. RULES ==================== -->
+<section id="rules" class="content-section active section-accordion open">
+  <div class="section-accordion-header" onclick="toggleSection(this)">
+    <div>
+      <div class="sec-label">ATTENTION</div>
+      <div class="sec-title">注意事項</div>
+    </div>
+    <span class="sec-toggle">+</span>
+  </div>
+  <div class="section-accordion-body">
+    <img src="image/rules-1.jpeg" loading="lazy" alt="ルールの写真" class="section-hero-img">
+    <p>以下の注意事項を必ず守って、ご利用の全ての皆様が気持ちよく過ごせるようにしましょう。</p>
+    <div class="horizontal-box">
+      <ul>
+  <li>チェックアウト時間は厳守をお願いいたします。<br><span>※時間を過ぎた場合、30分ごとに5,000円の延長料金が発生いたします。</span></li>
+  <li>ご使用後の調理器具や食器類は、回収ボックスに入れてください。</li>
+  <li>備え付けの備品・調理器具・アメニティ類は、お持ち帰りいただけません。<br><span>※持ち出し・紛失があった場合は、実費をご負担いただきます。</span></li>
+  <li>室内販売の商品は専用冷蔵庫にございます。金額をご確認のうえ、PayPayにてその場でお支払いをお願いします。<br><span>※未精算が確認された場合は、チェックアウト後にご請求させていただきます。</span></li>
+  <li>備品の破損や、壁・床などに傷が生じた場合も、実費をご負担いただきます。</li>
+  <li>ストーブの上に物を置いたり、ケトル・調理器具等を加熱する行為は大変危険なため禁止しております。<br><span>備品の破損・故障が発生した場合は、原因に応じて弁償をご請求させていただく場合があります。</span></li>
+  <li>ご利用後は、基本的な片付け・ゴミ分別をお願いいたします。<br><span>著しく清掃が行われていない場合（例：ゴミの放置、油汚れや嘔吐物の放置、通常の清掃で対応できない汚れ等）、追加清掃費として【10,000円をご請求】させていただきます。</span></li>
+  <li>板取川で川遊びをされる際は、必ずライフジャケットをご着用ください。<br><span>※ライフジャケットは無料で貸し出しております。</span></li>
+  <li>自然の中でのご滞在となります。施設内での怪我や事故について、当施設では責任を負いかねます。<br><span>※安全には十分ご注意ください。</span></li>
+  <li>サウナや焚き火の使用後は、火が完全に消えていることをご確認ください。<br><span>※強風時や乾燥注意報発令時は使用を制限させていただく場合がございます。<br>その場合の返金対応はいたしかねますので、予めご了承ください。</span></li>
+  <li>ゴミは分別ルールに従い、所定の場所へお捨てください。<br><span>※分別が困難なもの、大量のゴミについてはお持ち帰りをお願いすることがございます。</span></li>
+  <li>夜間（22時以降）は音量をお控えいただき、他のお客様や近隣へのご配慮をお願いいたします。</li>
+  <li>室内は全面禁煙です。電子タバコ・加熱式タバコも含め、喫煙は屋外で、ご自身で灰皿を用意してご利用ください。</li>
+  <li>ペットの同伴はご遠慮ください。<br><span>※アレルギー対策や清掃維持の観点から、ご了承いただけますと幸いです。</span></li>
+  <li>花火・発電機の使用、崖登り・川への飛び込みなどの危険行為は一切禁止です。</li>
+  <li>室内は全面禁煙です。喫煙は屋外にてお願いいたします。<br><span>※灰皿のご用意はありませんので、携帯灰皿をご持参ください。<br>自然環境保護のため、火の取り扱いには十分ご注意いただき、吸い殻のポイ捨ては固くお断りいたします。</span></li>
+  <li>当施設は山と川に囲まれた自然の中に位置しており、季節や天候の影響により、虫（カメムシ・蚊・ハチなど）や小動物の侵入、落葉、花粉、気温変化などが発生する場合があります。スタッフによる清掃・防虫対策を行っておりますが、これらは自然環境の一部であり、完全に防ぐことはできません。そのため、これら自然要因による影響（虫の侵入、気象変動など）については、返金・補償の対象外となります。あらかじめご理解のうえ、ご予約・ご利用をお願いいたします。</li>
+</ul>
+    </div>
+
+    <h4>避難経路</h4>
+    <img src="image/evacuation.png" loading="lazy" alt="避難経路の写真" width="100%" style="border-radius: 12px;">
+    <p>YOHAKUでは、万が一の災害や火災に備え、安全に避難していただくための経路を設定しています。</p>
+    <ul>
+      <li>出入口（玄関）を通り、屋外へ避難してください。</li>
+      <li>屋外に出た後は、建物からできるだけ離れた位置に速やかに移動してください。</li>
+      <li>避難時には、荷物には手をつけず、身の安全を最優先にしてください。</li>
+    </ul>
+    <p>非常時には施設スタッフまたは地元消防・警察の指示に従って行動してください。</p>
+    <p style="margin-top: 3rem;">ご理解とご協力をお願いいたします。皆さまが気持ちよくお過ごしいただけるよう、ご配慮をよろしくお願いいたします。</p>
+  </div>
+</section>
+
+<!-- ==================== 8. FAQ ==================== -->
+<section id="faq" class="content-section active section-accordion open">
+  <div class="section-accordion-header" onclick="toggleSection(this)">
+    <div>
+      <div class="sec-label">FAQ</div>
+      <div class="sec-title">よくある質問</div>
+    </div>
+    <span class="sec-toggle">+</span>
+  </div>
+  <div class="section-accordion-body">
+    <h3>ご予約・チェックインについて</h3>
+    <details class="qa-7">
+      <summary>チェックイン・チェックアウトの時間は？</summary>
+      <p>チェックインは15:00〜、チェックアウトは翌朝11:00です。
+        <br>時間を過ぎた場合は、30分ごとに延長料金（5,000円）が発生します。</p>
+    </details>
+    <details class="qa-7">
+      <summary>無人チェックインはどうすればいいですか？</summary>
+      <p>当日はスマートロックの暗証番号をメールでお送りします。
+        <br>指定時間内にご自身で入室していただけます。詳しい流れは<a href="#checkin">チェックイン</a>のご案内をご覧ください。</p>
+    </details>
+
+    <h3>設備・備品について</h3>
+    <details class="qa-7">
+      <summary>Wi-Fiは使えますか？</summary>
+      <p>無料Wi-Fiをご利用いただけます。パスワードは<a href="#wi-fi">Wi-Fiのご案内</a>をご覧ください。</p>
+    </details>
+    <details class="qa-7">
+      <summary>タオルやアメニティはありますか？</summary>
+      <p>バスタオル、フェイスタオル、歯ブラシ、シャンプー類をご用意しています。
+        <br>パジャマや寝間着はご持参ください。</p>
+    </details>
+    <details class="qa-7">
+      <summary>キッチン設備は何がありますか？</summary>
+      <p>調理器具（鍋・フライパン・包丁・まな板など）、食器類をご用意しています。</p>
+    </details>
+    <details class="qa-7">
+      <summary>焚き火やBBQはできますか？</summary>
+      <p>専用スペースでお楽しみいただけます。
+        <br>強風時などは安全面を考慮して利用を制限する場合があります。</p>
+    </details>
+
+    <h3>サウナ・川遊びについて</h3>
+    <details class="qa-7">
+      <summary>サウナの使い方が分かりません。</summary>
+      <p>YOHAKUのサウナは薪ストーブ式のセルフサウナです。
+        <br>火のつけ方やサウナの利用方法は<a href="#sauna">サウナの楽しみ方</a>に記載してあります。初めての方でも安心してご利用いただけます。</p>
+    </details>
+    <details class="qa-7">
+      <summary>サウナの温度が上がりません。</summary>
+      <p>以下をチェックしてみてください↓
+        <br>・薪は4本程度入っていますか？
+          <br><span>一度温度が下がると上げるまで時間がかかってしまいます。</span></p>
+    </details>
+    <details class="qa-7">
+      <summary>薪を入れるタイミングはいつですか？</summary>
+      <p>20分に1本程度薪を入れましょう。
+        <br>ストーブの中に薪が4本程度ある状態をキープしてください。
+        <br>炎が上がっている時に新しい薪を入れるのがポイントです。
+        <br><span>※少し早めに薪を入れることを意識しましょう。</span></p>
+    </details>
+    <details class="qa-7">
+      <summary>川遊びはどこでできますか？</summary>
+      <p>施設から徒歩1分ほどで板取川にアクセスできます。
+        <br>道順は現地の案内板をご確認ください。</p>
+    </details>
+    <details class="qa-7">
+      <summary>ライフジャケットはありますか？</summary>
+      <p>川遊び用のライフジャケットを無料で貸し出しています。
+        <br>お子様も必ず着用をお願いいたします。</p>
+    </details>
+    <details class="qa-7">
+      <summary>増水時でも川に入れますか？</summary>
+      <p>増水時は遊泳禁止のフェンスを設置します。
+        <br>フェンスがある場合は、絶対に川に入らないでください。</p>
+    </details>
+
+    <h3>その他・ルールについて</h3>
+    <details class="qa-7">
+      <summary>喫煙は可能ですか？</summary>
+      <p>室内は全面禁煙です。喫煙される場合は屋外にてお願いいたします。
+        <br>灰皿のご用意はありませんので、携帯灰皿をご持参ください。</p>
+    </details>
+    <details class="qa-7">
+      <summary>ペットは同伴できますか？</summary>
+      <p>申し訳ありませんが、ペットの同伴はご遠慮いただいております。</p>
+    </details>
+    <details class="qa-7">
+      <summary>ゴミはどのように処理すればいいですか？</summary>
+      <p>ゴミは分別のうえ、チェックアウト時にダストボックスにお出しください。
+        <br>分別が難しいものや大量のゴミはお持ち帰りをお願いする場合がございます。</p>
+    </details>
+  </div>
+</section>
+
+<!-- ==================== 9. INQUIRY ==================== -->
+<section id="info" class="content-section active section-accordion open">
+  <div class="section-accordion-header" onclick="toggleSection(this)">
+    <div>
+      <div class="sec-label">INQUIRY</div>
+      <div class="sec-title">お問い合わせについて</div>
+    </div>
+    <span class="sec-toggle">+</span>
+  </div>
+  <div class="section-accordion-body">
+    <img src="image/info-1.jpg" loading="lazy" alt="問い合わせの写真" class="section-hero-img">
+    <p>ご利用中のお困りごと・お問い合わせは以下のよくある質問をご覧いただき、解決しない場合は公式LINEにお問い合わせください。</p>
+    <div style="text-align: center; margin-top: 1rem;">
+      <a href="https://lin.ee/VVGbdrP" target="_blank" rel="nofollow" class="button button_line">公式LINE</a>
+    </div>
+
+    <h4 style="margin-top: 50px;">その他連絡先</h4>
+    <dl class="contact-dl">
+      <div class="roominfo"><dt>株式会社asobiba</dt><dd>050-1807-4256</dd></div>
+      <div class="roominfo"><dt>関警察署 板取駐在所</dt><dd>0581-57-2012</dd></div>
+      <div class="roominfo"><dt>消防署板取川出張所</dt><dd>0581-57-2014</dd></div>
+      <div class="roominfo"><dt>関保健所</dt><dd>0575-29-3424</dd></div>
+    </dl>
+  </div>
+</section>
+
+</div><!-- /info-section -->
+</div><!-- /info_php -->
+
+<!-- Back to top button -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#9650;</button>
+
+<footer>
+  <h1>ITADORI SAUNA</h1>
+    <p>Outdoor River Sauna Resort</p>
+
+    <p>公式LINEからお気軽にお問い合わせください</p>
+    <a href="https://lin.ee/Z5WvsRhc" rel="nofollow" ><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
+
+    <p style="margin-top:10px;">当日のご予約はお電話から承ります</p>
+    <a href="tel:050-1807-4256"  style="font-size:1.2em;"><u>TEL 050-1807-4256</u></a>
+
+    <div class="footer">
+  <div class="footer-section">
+    <h4>利用案内</h4>
+    <ul>
+      <li><a href="https://itadori-sauna.com//about/">特徴/About</a></li>
+      <li><a href="https://itadori-sauna.com//sauna/">サウナについて</a></li>
+      <li><a href="https://itadori-sauna.com//bbq/">BBQについて</a></li>
+      <li><a href="https://itadori-sauna.com//food/">サウナ飯について</a></li>
+      <li><a href="https://itadori-sauna.com//option/">レンタルについて</a></li>
+      <li><a href="https://itadori-sauna.com//faq/">Q&A</a></li>
+      <li><a href="https://itadori-sauna.com//info/">利用案内</a></li>
+      <li><a href="https://itadori-sauna.com//condition/">利用規約</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h4>体験・予約</h4>
+    <ul>
+      <li><a href="https://itadori-sauna.com//reserve/">予約/Reserve</a></li>
+      <li><a href="https://yohaku.itadori-sauna.com/stay.html">宿泊/Stay</a></li>
+      <li><a href="https://itadori-sauna.com//point/">サウナのポイント</a></li>
+      <li><a href="https://maps.app.goo.gl/v2YcGqkeZ14Exumc6" rel="nofollow">お客様の声</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h4>情報</h4>
+    <ul>
+      <li><a href="https://itadorisauna.stores.jp/" target="_blank" rel="nofollow">オンラインショップ</a></li>
+      <li><a href="https://itadori-sauna.com//sns/">最新情報/SNS</a></li>
+      <li><a href="https://itadori-sauna.com//blog/">ブログ</a></li>
+      <li><a href="https://itadori-sauna.com//spot/">周辺観光スポット</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h4>その他</h4>
+    <ul>
+      <li><a href="https://itadori-sauna.com//access/">アクセス</a></li>
+      <li><a href="https://co-asobiba.itadori-sauna.com/recruitment.html" target="_blank" rel="nofollow">求人応募</a></li>
+      <li><a href="https://co-asobiba.itadori-sauna.com/" target="_blank" rel="nofollow">運営会社</a></li>
+    </ul>
+  </div>
+</div>
+
+    <div class="copy">
+        <p>&copy;asobiba</p>
+    </div>
+</footer>
+
+<!-- Instagram embed.js - loaded ONCE -->
+<script async src="//www.instagram.com/embed.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+// AOS
+AOS.init({ once: true, duration: 1200 });
+
+// Hamburger menu
+$(function () {
+  $(".Toggle").click(function () {
+    $(this).toggleClass("active");
+    if ($(this).hasClass("active")) {
+      $(".NavMenu").addClass("active");
+      $("body").css("overflow", "hidden");
+    } else {
+      $(".NavMenu").removeClass("active");
+      $("body").css("overflow", "auto");
+    }
+  });
+});
+
+// Section accordion toggle
+function toggleSection(header) {
+  var accordion = header.parentElement;
+  accordion.classList.toggle('open');
+}
+
+// Sub-section accordion toggle
+function toggleSub(header) {
+  var accordion = header.parentElement;
+  accordion.classList.toggle('open');
+}
+
+// Nav filter functionality
+var currentFilter = 'all';
+
+document.querySelectorAll('.info-sticky-nav .nav-pill').forEach(function(pill) {
+  pill.addEventListener('click', function(e) {
+    e.preventDefault();
+    var filter = this.getAttribute('data-filter');
+    currentFilter = filter;
+
+    // Update active pill
+    document.querySelectorAll('.info-sticky-nav .nav-pill').forEach(function(p) {
+      p.classList.remove('active');
+    });
+    this.classList.add('active');
+
+    var sections = document.querySelectorAll('.content-section');
+    var infoPhp = document.querySelector('.info_php');
+    var tocArea = document.getElementById('tocArea');
+    var highlightCards = document.querySelector('.info-highlight-cards');
+
+    if (filter === 'all') {
+      // Show all sections, TOC, highlight cards
+      infoPhp.classList.remove('single-section');
+      if (tocArea) tocArea.style.display = '';
+      if (highlightCards) highlightCards.style.display = '';
+      sections.forEach(function(s) {
+        s.classList.add('active');
+        s.classList.add('open');
+        s.style.display = '';
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Single section mode
+      infoPhp.classList.add('single-section');
+      if (tocArea) tocArea.style.display = 'none';
+      if (highlightCards) highlightCards.style.display = 'none';
+
+      sections.forEach(function(s) {
+        if (s.id === filter) {
+          s.classList.add('active');
+          s.classList.add('open');
+          s.style.display = '';
+          // Open all sub-accordions in this section
+          s.querySelectorAll('.sub-accordion').forEach(function(sub) {
+            sub.classList.add('open');
+          });
+        } else {
+          s.classList.remove('active');
+          s.style.display = 'none';
+        }
+      });
+
+      // Scroll to target section
+      setTimeout(function() {
+        var target = document.getElementById(filter);
+        if (target) {
+          var yOffset = -60;
+          var y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  });
+});
+
+// Back to top button visibility
+window.addEventListener('scroll', function() {
+  var btn = document.getElementById('backToTop');
+  if (window.scrollY > 600) {
+    btn.classList.add('visible');
+  } else {
+    btn.classList.remove('visible');
+  }
+});
+
+// Sticky nav active indicator on scroll
+var sectionIds = ['checkin','yohaku','sauna','itemlist','roomitems','checkout','rules','faq','info'];
+window.addEventListener('scroll', function() {
+  if (currentFilter !== 'all') return;
+  var scrollPos = window.scrollY + 120;
+  var currentSection = '';
+  sectionIds.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el && el.offsetTop <= scrollPos) {
+      currentSection = id;
+    }
+  });
+  document.querySelectorAll('.info-sticky-nav .nav-pill').forEach(function(pill) {
+    var f = pill.getAttribute('data-filter');
+    if (f === currentSection || (currentSection === '' && f === 'all')) {
+      // Don't auto-switch to 'all' - only highlight section pills
+    }
+    pill.classList.remove('active');
+  });
+  if (currentSection) {
+    var activePill = document.querySelector('.info-sticky-nav .nav-pill[data-filter="' + currentSection + '"]');
+    if (activePill) {
+      activePill.classList.add('active');
+      // Scroll nav to show active pill
+      activePill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  } else {
+    var allPill = document.querySelector('.info-sticky-nav .nav-pill[data-filter="all"]');
+    if (allPill) allPill.classList.add('active');
+  }
+});
+</script>
+
+</body>
+</html>
