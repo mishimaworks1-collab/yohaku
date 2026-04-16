@@ -122,47 +122,90 @@
     margin-top: 0.2rem;
   }
 
-  /* ===== Enjoy Guide Cards ===== */
-  .enjoy-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
+  /* ===== Enjoy Guide ===== */
+  .enjoy-block {
+    margin-bottom: 3rem;
   }
 
-  @media (max-width: 500px) {
-    .enjoy-grid { grid-template-columns: 1fr; }
+  .enjoy-block:last-child {
+    margin-bottom: 0;
   }
 
-  .enjoy-card {
-    border: 1px solid #e8e2d8;
-    border-radius: 12px;
-    padding: 1.5rem;
-    background: #fff;
-    transition: box-shadow 0.3s;
-  }
-
-  .enjoy-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  }
-
-  .enjoy-card .enjoy-icon {
-    font-size: 1.5rem;
+  .enjoy-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
     margin-bottom: 0.6rem;
   }
 
-  .enjoy-card .enjoy-title {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #333;
-    margin: 0 0 0.5rem;
+  .enjoy-header .enjoy-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #8a7a55;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
   }
 
-  .enjoy-card .enjoy-desc {
-    font-size: 0.82rem;
-    color: #777;
-    line-height: 1.7;
+  .enjoy-header .enjoy-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #333;
     margin: 0;
+  }
+
+  .enjoy-lead {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.9;
+    margin: 0 0 1rem;
+  }
+
+  .enjoy-photos {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 4px 0 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .enjoy-photos::-webkit-scrollbar { display: none; }
+
+  .enjoy-photos img {
+    flex-shrink: 0;
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: start;
+  }
+
+  .enjoy-tips {
+    margin: 0.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .enjoy-tips li {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.8;
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.3rem;
+  }
+
+  .enjoy-tips li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #8a7a55;
   }
 
   /* ===== Section Layout ===== */
@@ -637,59 +680,163 @@
   <div class="info-section-inner">
     <p class="section-label">HOW TO ENJOY</p>
     <h2>YOHAKUの楽しみ方</h2>
-    <p>使い方の前に、まずは過ごし方のヒントを。<br>YOHAKUには、日常では味わえない体験がいくつも散りばめられています。</p>
+    <p class="enjoy-lead">使い方の前に、まずは過ごし方のヒントを。<br>YOHAKUには、日常では味わえない体験がいくつも散りばめられています。</p>
 
-    <div class="enjoy-grid">
-
-      <div class="enjoy-card">
-        <div class="enjoy-icon">🧘</div>
-        <div class="enjoy-title">朝ヨガで目覚める</div>
-        <p class="enjoy-desc">ヨガマットを敷いて、朝の澄んだ空気の中でストレッチ。川のせせらぎをBGMに、体を静かにほぐす時間。</p>
+    <!-- 1. 朝ヨガ -->
+    <div class="enjoy-block">
+      <div class="enjoy-header">
+        <div class="enjoy-num">1</div>
+        <h3 class="enjoy-title" style="border:none; padding:0; margin:0;">朝ヨガで目覚める</h3>
       </div>
-
-      <div class="enjoy-card">
-        <div class="enjoy-icon">🔭</div>
-        <div class="enjoy-title">双眼鏡で自然観察</div>
-        <p class="enjoy-desc">備え付けの双眼鏡で、野鳥や対岸の景色を観察。夜は星空を眺めるのもおすすめです。</p>
+      <p class="enjoy-lead">ヨガマットを持ってテラスへ。川の音と朝の冷たい空気が、体を静かに起こしてくれます。</p>
+      <div class="enjoy-photos">
+        <img src="image/tarp-3.jpeg" alt="テラスでヨガ" loading="lazy">
+        <img src="image/chair-1.jpg" alt="外気浴チェア" loading="lazy">
+        <img src="image/river-3.jpeg" alt="朝の板取川" loading="lazy">
       </div>
-
-      <div class="enjoy-card">
-        <div class="enjoy-icon">☕</div>
-        <div class="enjoy-title">ハンドドリップコーヒー</div>
-        <p class="enjoy-desc">豆を挽くところから始める、贅沢な一杯。コーヒーミルとドリッパーをご用意しています。自然の中で味わう香りは格別です。</p>
-      </div>
-
-      <div class="enjoy-card">
-        <div class="enjoy-icon">🔥</div>
-        <div class="enjoy-title">サウナの楽しみ方</div>
-        <p class="enjoy-desc">薪をくべて、じっくり温める。ロウリュで蒸気を上げ、板取川の水風呂へ。外気浴で空を見上げれば、深いととのいが訪れます。</p>
-      </div>
-
-      <div class="enjoy-card">
-        <div class="enjoy-icon">🚶</div>
-        <div class="enjoy-title">川沿いの散歩</div>
-        <p class="enjoy-desc">板取川沿いをのんびり散策。季節ごとに表情を変える清流と木々の景色が、心をリセットしてくれます。</p>
-      </div>
-
-      <div class="enjoy-card">
-        <div class="enjoy-icon">🧠</div>
-        <div class="enjoy-title">瞑想の時間</div>
-        <p class="enjoy-desc">テラスやチェアに座って、何もしない時間を。川の音に意識を預けるだけで、自然と呼吸が深くなっていきます。</p>
-      </div>
-
-      <div class="enjoy-card">
-        <div class="enjoy-icon">📖</div>
-        <div class="enjoy-title">サウナの本を読む</div>
-        <p class="enjoy-desc">室内にはサウナに関する書籍をご用意。サウナの前後に読めば、ととのいがもっと深くなるかもしれません。</p>
-      </div>
-
-      <div class="enjoy-card">
-        <div class="enjoy-icon">🔥</div>
-        <div class="enjoy-title">焚き火を囲む</div>
-        <p class="enjoy-desc">夜は焚き火を囲んで語らう時間を。揺れる炎を眺めながら過ごす夜は、キャンプとも違う特別な体験です。</p>
-      </div>
-
+      <ul class="enjoy-tips">
+        <li><strong>太陽礼拝</strong> — 朝一番におすすめ。5〜10分で全身が温まります</li>
+        <li><strong>キャット＆カウ</strong> — 背骨をほぐす基本ポーズ。寝起きの体に最適</li>
+        <li><strong>チャイルドポーズ</strong> — 板取川の音に耳を傾けながら、呼吸を深く</li>
+        <li><strong>立木のポーズ</strong> — バランスに集中すると、頭がすっきりクリアに</li>
+        <li>ヨガマットは室内にご用意しています。テラス・室内どちらでもどうぞ</li>
+      </ul>
     </div>
+
+    <!-- 2. 双眼鏡 -->
+    <div class="enjoy-block">
+      <div class="enjoy-header">
+        <div class="enjoy-num">2</div>
+        <h3 class="enjoy-title" style="border:none; padding:0; margin:0;">双眼鏡で自然観察</h3>
+      </div>
+      <p class="enjoy-lead">備え付けの双眼鏡で、肉眼では見えない世界を覗いてみてください。</p>
+      <div class="enjoy-photos">
+        <img src="image/river-1.JPG" alt="板取川の景色" loading="lazy">
+        <img src="image/river-5.jpeg" alt="川沿いの自然" loading="lazy">
+      </div>
+      <ul class="enjoy-tips">
+        <li><strong>朝</strong> — 川面に霧がかかる幻想的な景色。野鳥の活動も活発に</li>
+        <li><strong>昼</strong> — 対岸の木々や岩肌の表情を観察</li>
+        <li><strong>夜</strong> — 板取は街灯が少なく星が近い。月のクレーターも見えます</li>
+      </ul>
+    </div>
+
+    <!-- 3. コーヒー -->
+    <div class="enjoy-block">
+      <div class="enjoy-header">
+        <div class="enjoy-num">3</div>
+        <h3 class="enjoy-title" style="border:none; padding:0; margin:0;">ハンドドリップコーヒー</h3>
+      </div>
+      <p class="enjoy-lead">豆を挽く音から始まる、贅沢な一杯。自然の中で味わう香りは格別です。</p>
+      <div class="enjoy-photos">
+        <img src="image/coffee-1.jpg" alt="コーヒー豆を挽く" loading="lazy">
+        <img src="image/coffee-4.webp" alt="ドリップ中" loading="lazy">
+        <img src="image/coffee-5.webp" alt="完成" loading="lazy">
+      </div>
+      <ul class="enjoy-tips">
+        <li>コーヒー豆・ミル・セラミックドリッパーを無料でお使いいただけます</li>
+        <li><strong>おすすめのタイミング</strong> — 朝イチの一杯、サウナ後の一杯、焚き火のそばでの一杯</li>
+        <li>紙フィルター不要のセラミックフィルターで、環境にも優しい</li>
+        <li>淹れ方の詳しい手順は「客室の使い方」セクションに写真付きで掲載しています</li>
+      </ul>
+    </div>
+
+    <!-- 4. サウナ -->
+    <div class="enjoy-block">
+      <div class="enjoy-header">
+        <div class="enjoy-num">4</div>
+        <h3 class="enjoy-title" style="border:none; padding:0; margin:0;">プライベートサウナで整う</h3>
+      </div>
+      <p class="enjoy-lead">薪をくべて、自分だけのサウナを仕上げる。急がず、ゆっくり。それがYOHAKUのととのい方です。</p>
+      <div class="enjoy-photos">
+        <img src="image/sauna-1.jpeg" alt="テントサウナ" loading="lazy">
+        <img src="image/fire-1.jpeg" alt="薪ストーブ" loading="lazy">
+        <img src="image/oke-1.jpg" alt="ロウリュ" loading="lazy">
+        <img src="image/poncho-1.png" alt="サウナポンチョ" loading="lazy">
+        <img src="image/chair-3.jpg" alt="外気浴" loading="lazy">
+      </div>
+      <ul class="enjoy-tips">
+        <li><strong>おすすめの流れ</strong> — サウナ10分 → 川の水風呂1分 → 外気浴5分 を2〜3セット</li>
+        <li><strong>ロウリュ</strong> — ストーンに水をかけて蒸気を発生。アロマを入れると香りも楽しめます</li>
+        <li><strong>川の水風呂</strong> — 季節によって水温が変わるのも自然の醍醐味。冬は刺激的、夏は心地よい</li>
+        <li><strong>外気浴</strong> — インフィニティチェアに身を預け、空を見上げるだけ。何も考えない時間が訪れます</li>
+        <li>サウナポンチョ・サウナハット・水着は無料レンタルあり</li>
+      </ul>
+    </div>
+
+    <!-- 5. 川の散歩 -->
+    <div class="enjoy-block">
+      <div class="enjoy-header">
+        <div class="enjoy-num">5</div>
+        <h3 class="enjoy-title" style="border:none; padding:0; margin:0;">川沿いの散歩</h3>
+      </div>
+      <p class="enjoy-lead">板取川沿いをのんびり歩くだけで、心がリセットされていきます。</p>
+      <div class="enjoy-photos">
+        <img src="image/river-2.JPG" alt="板取川沿い" loading="lazy">
+        <img src="image/river-4.jpg" alt="清流" loading="lazy">
+        <img src="image/river-3.jpeg" alt="川の景色" loading="lazy">
+      </div>
+      <ul class="enjoy-tips">
+        <li><strong>朝</strong> — 空気が澄んでいて、鳥のさえずりがよく聞こえる時間帯</li>
+        <li><strong>夕方</strong> — 夕日が川面に反射する景色が特に美しい</li>
+        <li>足元が濡れても気にならないサンダルがおすすめ（備品あり）</li>
+      </ul>
+    </div>
+
+    <!-- 6. 瞑想 -->
+    <div class="enjoy-block">
+      <div class="enjoy-header">
+        <div class="enjoy-num">6</div>
+        <h3 class="enjoy-title" style="border:none; padding:0; margin:0;">瞑想の時間</h3>
+      </div>
+      <p class="enjoy-lead">テラスやチェアに座って、ただ川の音に意識を預けるだけ。「何もしない」が最高の贅沢になる場所です。</p>
+      <div class="enjoy-photos">
+        <img src="image/chair-4.jpeg" alt="チェアで瞑想" loading="lazy">
+        <img src="image/tarp-5.jpeg" alt="テラス" loading="lazy">
+      </div>
+      <ul class="enjoy-tips">
+        <li><strong>5分間呼吸法</strong> — 鼻から4秒吸い、7秒止め、8秒かけて口から吐く。3セットだけで十分</li>
+        <li><strong>音に集中する瞑想</strong> — 目を閉じて、川・鳥・風の音をひとつずつ拾っていく</li>
+        <li>サウナ後の外気浴と組み合わせると、さらに深い体験になります</li>
+      </ul>
+    </div>
+
+    <!-- 7. サウナの本 -->
+    <div class="enjoy-block">
+      <div class="enjoy-header">
+        <div class="enjoy-num">7</div>
+        <h3 class="enjoy-title" style="border:none; padding:0; margin:0;">サウナの本を読む</h3>
+      </div>
+      <p class="enjoy-lead">室内にはサウナに関する書籍をご用意。読んでから入るか、入ってから読むか。どちらも正解です。</p>
+      <div class="enjoy-photos">
+        <img src="image/yohaku-1.jpeg" alt="YOHAKU室内" loading="lazy">
+      </div>
+      <ul class="enjoy-tips">
+        <li>サウナの歴史や文化を知ると、ととのいの深さが変わる</li>
+        <li>雨の日の過ごし方としてもおすすめ。プロジェクターで映画もどうぞ</li>
+      </ul>
+    </div>
+
+    <!-- 8. 焚き火 -->
+    <div class="enjoy-block">
+      <div class="enjoy-header">
+        <div class="enjoy-num">8</div>
+        <h3 class="enjoy-title" style="border:none; padding:0; margin:0;">焚き火を囲む夜</h3>
+      </div>
+      <p class="enjoy-lead">揺れる炎を眺めながら語り合う夜。ホテルでもキャンプでもない、YOHAKUだけの時間。</p>
+      <div class="enjoy-photos">
+        <img src="image/takibi-1.jpg" alt="焚き火" loading="lazy">
+        <img src="image/takibi-3.jpeg" alt="焚き火の炎" loading="lazy">
+        <img src="image/takibi-5.jpg" alt="夜の焚き火" loading="lazy">
+      </div>
+      <ul class="enjoy-tips">
+        <li><strong>マシュマロ</strong> — 持参すれば焚き火で焼ける。外はカリッ、中はとろっの焼きマシュマロは鉄板</li>
+        <li><strong>音楽</strong> — Bluetoothスピーカーを外に持ち出して、焚き火×音楽の時間に</li>
+        <li><strong>星空</strong> — 焚き火の明かりを少し落として空を見上げてみてください</li>
+        <li>薪とファイヤーピットは備え付け。夜間の大きな音だけご配慮ください</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
