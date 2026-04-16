@@ -724,14 +724,17 @@
   .info-footer {
     text-align: center;
     padding: 3rem 2rem 4rem;
-    border-top: 1px solid #e8e2d8;
+    background-color: rgb(30, 30, 30);
+  }
+
+  .info-footer-inner {
     max-width: 800px;
     margin: 0 auto;
   }
 
   .info-footer p {
     font-size: 0.85rem;
-    color: #888;
+    color: #aaa;
     margin: 0 0 1rem;
     line-height: 1.7;
   }
@@ -746,14 +749,20 @@
 
   .info-footer-links a {
     font-size: 0.82rem;
-    color: #8a7a55;
+    color: #d4b98a;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s;
   }
 
   .info-footer-links a:hover {
-    border-bottom-color: #8a7a55;
+    border-bottom-color: #d4b98a;
+  }
+
+  .info-footer .copy {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    color: #666;
   }
 
   /* ===== Responsive ===== */
@@ -2462,13 +2471,16 @@
 
 <!-- ===== Footer ===== -->
 <div class="info-footer">
-  <p>ご不明な点は公式LINEよりお気軽にお問い合わせください。</p>
-  <a href="https://lin.ee/Z5WvsRhc" rel="nofollow"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
-  <div class="info-footer-links">
-    <a href="https://yohaku.itadori-sauna.com/stay.html">YOHAKU 宿泊ページ</a>
-    <a href="https://yohaku.itadori-sauna.com/campaign.html">キャンペーン</a>
-    <a href="https://itadori-sauna.com/reserve/" target="_blank">ITADORI SAUNA 予約</a>
-    <a href="https://www.instagram.com/yohaku_itadorisauna/" target="_blank" rel="nofollow">Instagram</a>
+  <div class="info-footer-inner">
+    <p>ご不明な点は公式LINEよりお気軽にお問い合わせください。</p>
+    <a href="https://lin.ee/Z5WvsRhc" rel="nofollow"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
+    <div class="info-footer-links">
+      <a href="https://yohaku.itadori-sauna.com/stay.html">YOHAKU 宿泊ページ</a>
+      <a href="https://yohaku.itadori-sauna.com/campaign.html">キャンペーン</a>
+      <a href="https://itadori-sauna.com/reserve/" target="_blank">ITADORI SAUNA 予約</a>
+      <a href="https://www.instagram.com/yohaku_itadorisauna/" target="_blank" rel="nofollow">Instagram</a>
+    </div>
+    <p class="copy">&copy; asobiba</p>
   </div>
 </div>
 
