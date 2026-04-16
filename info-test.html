@@ -242,11 +242,11 @@
     padding: 4rem 2rem;
   }
 
-  .info-section:nth-child(even) {
+  .info-section.bg-warm {
     background-color: #f9f7f3;
   }
 
-  .info-section:nth-child(odd) {
+  .info-section.bg-white {
     background-color: #fff;
   }
 
@@ -637,6 +637,120 @@
     text-decoration: underline;
   }
 
+  /* ===== Sub-section Accordion ===== */
+  .sub-acc {
+    border: 1px solid #e8e2d8;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .sub-acc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+  }
+
+  .sub-acc-header:hover {
+    background: #f9f7f3;
+  }
+
+  .sub-acc-header h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    border: none;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  .sub-acc-toggle {
+    font-size: 1.2rem;
+    color: #8a7a55;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  .sub-acc.open .sub-acc-toggle {
+    transform: rotate(45deg);
+  }
+
+  .sub-acc-body {
+    display: none;
+    padding: 0 1.2rem 1.2rem;
+  }
+
+  .sub-acc.open .sub-acc-body {
+    display: block;
+  }
+
+  /* ===== Section Jump Links ===== */
+  .section-jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .section-jump-links a {
+    font-size: 0.78rem;
+    color: #8a7a55;
+    text-decoration: none;
+    border: 1px solid #e8e2d8;
+    border-radius: 20px;
+    padding: 6px 14px;
+    transition: background 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+
+  .section-jump-links a:hover {
+    background: #f7f4ef;
+    border-color: #8a7a55;
+  }
+
+  /* ===== Simple Footer ===== */
+  .info-footer {
+    text-align: center;
+    padding: 3rem 2rem 4rem;
+    border-top: 1px solid #e8e2d8;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .info-footer p {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0 0 1rem;
+    line-height: 1.7;
+  }
+
+  .info-footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .info-footer-links a {
+    font-size: 0.82rem;
+    color: #8a7a55;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .info-footer-links a:hover {
+    border-bottom-color: #8a7a55;
+  }
+
   /* ===== Responsive ===== */
   @media (max-width: 600px) {
     .info-section {
@@ -707,7 +821,7 @@
 <!-- ========================================== -->
 <!-- 0. 楽しみ方ガイド -->
 <!-- ========================================== -->
-<section class="info-section" id="enjoy" data-section="enjoy" style="background-color: #f9f7f3;">
+<section class="info-section bg-warm" id="enjoy" data-section="enjoy">
   <div class="info-section-inner">
     <p class="section-label">HOW TO ENJOY</p>
     <h2>YOHAKUの楽しみ方</h2>
@@ -875,7 +989,7 @@
 <!-- ========================================== -->
 <!-- 1. チェックイン -->
 <!-- ========================================== -->
-<section class="info-section" id="checkin" data-section="checkin">
+<section class="info-section bg-white" id="checkin" data-section="checkin">
   <div class="info-section-inner">
     <p class="section-label">CHECK IN</p>
     <h2>チェックイン</h2>
@@ -924,11 +1038,27 @@
 <!-- ========================================== -->
 <!-- 2. 客室の使い方 -->
 <!-- ========================================== -->
-<section class="info-section" id="room" data-section="room">
+<section class="info-section bg-warm" id="room" data-section="room">
   <div class="info-section-inner">
     <p class="section-label">ROOM GUIDE</p>
     <h2>客室の使い方</h2>
     <img src="image/yohaku-1.jpeg" alt="YOHAKU客室" class="section-hero" loading="lazy">
+
+    <div class="section-jump-links">
+      <a href="#wi-fi">Wi-Fi</a>
+      <a href="#stove">灯油ストーブ</a>
+      <a href="#projector">プロジェクター</a>
+      <a href="#speaker">スピーカー</a>
+      <a href="#rice">羽釜ごはん</a>
+      <a href="#kettle">ケトル</a>
+      <a href="#coffee">コーヒー</a>
+      <a href="#bbq">BBQグリル</a>
+      <a href="#trash">ゴミ分別</a>
+      <a href="#dishes">食器の洗い方</a>
+      <a href="#river">川遊び</a>
+      <a href="#bonfire">焚き火</a>
+      <a href="#tarp">タープ</a>
+    </div>
 
     <!-- Wi-Fi -->
     <h3 id="wi-fi">Wi-Fiのご案内</h3>
@@ -1172,7 +1302,7 @@
     </div>
 
     <!-- BBQグリル -->
-    <h3>BBQグリルの使い方</h3>
+    <h3 id="bbq">BBQグリルの使い方</h3>
     <p>仲間とゆっくり、自然の中でBBQをお楽しみください。</p>
     <div class="step-scroll">
       <div class="step-card">
@@ -1224,7 +1354,7 @@
     </div>
 
     <!-- ゴミの分別 -->
-    <h3>ゴミの分別方法</h3>
+    <h3 id="trash">ゴミの分別方法</h3>
     <p>ゴミはキッチンのダストボックスに分別して捨ててください。<br>※分別ルールは地域と連携しています。ご協力お願いします！</p>
     <div class="step-scroll">
       <div class="step-card">
@@ -1244,7 +1374,7 @@
     </div>
 
     <!-- 調理器具・食器類の洗い方 -->
-    <h3>調理器具・食器類の洗い方</h3>
+    <h3 id="dishes">調理器具・食器類の洗い方</h3>
     <p>自然と共存する施設のため、できるだけ洗剤の量は控えめにしていただけると嬉しいです。</p>
     <div class="step-scroll">
       <div class="step-card">
@@ -1271,7 +1401,7 @@
     </div>
 
     <!-- 川遊び -->
-    <h3>川遊びについて</h3>
+    <h3 id="river">川遊びについて</h3>
     <p>YOHAKUでは、目の前を流れる清らかな板取川でもお楽しみいただけます。自然を満喫しながら、安全に遊んでいただくため、以下のルールをお守りください。</p>
     <div class="step-scroll">
       <div class="step-card">
@@ -1316,7 +1446,7 @@
     </div>
 
     <!-- 焚き火 -->
-    <h3>焚き火について</h3>
+    <h3 id="bonfire">焚き火について</h3>
     <p>焚き火も、YOHAKUでの大切な"癒しの時間"のひとつ。何もせず、ただ火を見つめるだけの時間が、思いがけず深い余白になります。</p>
     <div class="step-scroll">
       <div class="step-card">
@@ -1361,7 +1491,7 @@
     </div>
 
     <!-- タープ -->
-    <h3>タープの使い方</h3>
+    <h3 id="tarp">タープの使い方</h3>
     <p>雨の日や日差しが気になる場合はタープをご利用ください。</p>
     <div class="step-scroll">
       <div class="step-card">
@@ -1426,14 +1556,25 @@
 <!-- ========================================== -->
 <!-- 3. サウナの使い方 -->
 <!-- ========================================== -->
-<section class="info-section" id="sauna" data-section="sauna">
+<section class="info-section bg-white" id="sauna" data-section="sauna">
   <div class="info-section-inner">
     <p class="section-label">SAUNA</p>
     <h2>サウナの使い方</h2>
     <img src="image/sauna-1.jpeg" alt="サウナストーブ" class="section-hero" loading="lazy">
 
+    <div class="section-jump-links">
+      <a href="#sauna-fire">火入れ</a>
+      <a href="#sauna-maki">薪割り</a>
+      <a href="#sauna-steam">スチーム</a>
+      <a href="#sauna-co">CO チェッカー</a>
+      <a href="#sauna-mizuburo">水風呂</a>
+      <a href="#sauna-gaikiyoku">外気浴</a>
+      <a href="#sauna-chair">チェア</a>
+      <a href="#sauna-end">片付け</a>
+    </div>
+
     <!-- 火入れ -->
-    <h3>サウナの火入れ</h3>
+    <h3 id="sauna-fire">サウナの火入れ</h3>
     <p>YOHAKUではお客様ご自身で薪ストーブに火を焚き、サウナを楽しんでいただきます。</p>
     <div class="step-scroll">
       <div class="step-card">
@@ -1471,7 +1612,7 @@
     </div>
 
     <!-- 薪割り -->
-    <h3>薪の割り方</h3>
+    <h3 id="sauna-maki">薪の割り方</h3>
     <p>YOHAKUでは、薪割りもひとつのアクティビティ。普段の生活では味わえない、自然と向き合う時間をお楽しみください。</p>
     <div class="step-scroll">
       <div class="step-card">
@@ -1509,7 +1650,7 @@
     </div>
 
     <!-- スチームジェネレーター -->
-    <h3>スチームジェネレーターの使い方</h3>
+    <h3 id="sauna-steam">スチームジェネレーターの使い方</h3>
     <p>蒸気が変える、サウナの未来へ。粒度の細かい加熱水蒸気を発生させ、サウナ室全体に熱と潤いを行き渡らせる設計の専用ストーブを堪能してください。</p>
     <div class="step-scroll">
       <div class="step-card">
@@ -1549,7 +1690,7 @@
     </div>
 
     <!-- 一酸化炭素チェッカー -->
-    <h3>一酸化炭素チェッカーについて</h3>
+    <h3 id="sauna-co">一酸化炭素チェッカーについて</h3>
     <div class="step-scroll">
       <div class="step-card">
         <div class="step-card-number">1</div>
@@ -1571,7 +1712,7 @@
     </div>
 
     <!-- 水風呂 -->
-    <h3>水風呂の楽しみ方</h3>
+    <h3 id="sauna-mizuburo">水風呂の楽しみ方</h3>
     <div class="step-scroll">
       <div class="step-card">
         <div class="step-card-number">1</div>
@@ -1590,7 +1731,7 @@
     </div>
 
     <!-- 外気浴 -->
-    <h3>外気浴の楽しみ方</h3>
+    <h3 id="sauna-gaikiyoku">外気浴の楽しみ方</h3>
     <div class="step-scroll">
       <div class="step-card">
         <div class="step-card-number">1</div>
@@ -1623,7 +1764,7 @@
     </div>
 
     <!-- ラフマチェア -->
-    <h3>Lafuma（ラフマ）リクライニングチェアの使い方</h3>
+    <h3 id="sauna-chair">Lafuma（ラフマ）リクライニングチェアの使い方</h3>
     <div class="step-scroll">
       <div class="step-card">
         <div class="step-card-number">1</div>
@@ -1660,7 +1801,7 @@
     </div>
 
     <!-- サウナが終わったら -->
-    <h3>サウナが終わったら</h3>
+    <h3 id="sauna-end">サウナが終わったら</h3>
     <div class="step-scroll">
       <div class="step-card">
         <div class="step-card-number">1</div>
@@ -1700,7 +1841,7 @@
 <!-- ========================================== -->
 <!-- 4. 備品リスト -->
 <!-- ========================================== -->
-<section class="info-section" id="itemlist" data-section="itemlist">
+<section class="info-section bg-warm" id="itemlist" data-section="itemlist">
   <div class="info-section-inner">
     <p class="section-label">ITEM LIST</p>
     <h2>備品リスト</h2>
@@ -1979,7 +2120,7 @@
 <!-- ========================================== -->
 <!-- 5. 室内販売 -->
 <!-- ========================================== -->
-<section class="info-section" id="roomitems" data-section="roomitems">
+<section class="info-section bg-white" id="roomitems" data-section="roomitems">
   <div class="info-section-inner">
     <p class="section-label">ROOM ITEMS</p>
     <h2>室内販売のご案内</h2>
@@ -2024,7 +2165,7 @@
 <!-- ========================================== -->
 <!-- 6. チェックアウト -->
 <!-- ========================================== -->
-<section class="info-section" id="checkout" data-section="checkout">
+<section class="info-section bg-warm" id="checkout" data-section="checkout">
   <div class="info-section-inner">
     <p class="section-label">CHECK OUT</p>
     <h2>チェックアウト</h2>
@@ -2141,7 +2282,7 @@
 <!-- ========================================== -->
 <!-- 7. 注意事項 -->
 <!-- ========================================== -->
-<section class="info-section" id="rules" data-section="rules">
+<section class="info-section bg-white" id="rules" data-section="rules">
   <div class="info-section-inner">
     <p class="section-label">ATTENTION</p>
     <h2>注意事項</h2>
@@ -2187,7 +2328,7 @@
 <!-- ========================================== -->
 <!-- 8. よくある質問 -->
 <!-- ========================================== -->
-<section class="info-section" id="faq" data-section="faq">
+<section class="info-section bg-warm" id="faq" data-section="faq">
   <div class="info-section-inner">
     <p class="section-label">FAQ</p>
     <h2>よくある質問</h2>
@@ -2281,7 +2422,7 @@
 <!-- ========================================== -->
 <!-- 9. お問い合わせ -->
 <!-- ========================================== -->
-<section class="info-section" id="inquiry" data-section="inquiry">
+<section class="info-section bg-white" id="inquiry" data-section="inquiry">
   <div class="info-section-inner">
     <p class="section-label">INQUIRY</p>
     <h2>お問い合わせについて</h2>
@@ -2314,6 +2455,18 @@
 </section>
 
 
+<!-- ===== Footer ===== -->
+<div class="info-footer">
+  <p>ご不明な点は公式LINEよりお気軽にお問い合わせください。</p>
+  <a href="https://lin.ee/Z5WvsRhc" rel="nofollow"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
+  <div class="info-footer-links">
+    <a href="https://yohaku.itadori-sauna.com/stay.html">YOHAKU 宿泊ページ</a>
+    <a href="https://yohaku.itadori-sauna.com/campaign.html">キャンペーン</a>
+    <a href="https://itadori-sauna.com/reserve/" target="_blank">ITADORI SAUNA 予約</a>
+    <a href="https://www.instagram.com/yohaku_itadorisauna/" target="_blank" rel="nofollow">Instagram</a>
+  </div>
+</div>
+
 <!-- ===== Back to Top Button ===== -->
 <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">&#8593;</button>
 
@@ -2332,6 +2485,18 @@
     navLinks.forEach(function(link) {
       link.classList.toggle('active', link.getAttribute('data-filter') === filter);
     });
+    // Auto-scroll nav to show active tab
+    var activeLink = nav.querySelector('a.active');
+    if (activeLink) {
+      var navInner = nav.querySelector('.info-nav-inner');
+      var linkLeft = activeLink.offsetLeft;
+      var linkWidth = activeLink.offsetWidth;
+      var navWidth = navInner.offsetWidth;
+      navInner.scrollTo({
+        left: linkLeft - (navWidth / 2) + (linkWidth / 2),
+        behavior: 'smooth'
+      });
+    }
   }
 
   function filterSections(filter) {
