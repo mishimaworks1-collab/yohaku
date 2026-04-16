@@ -122,6 +122,49 @@
     margin-top: 0.2rem;
   }
 
+  /* ===== Enjoy Guide Cards ===== */
+  .enjoy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 500px) {
+    .enjoy-grid { grid-template-columns: 1fr; }
+  }
+
+  .enjoy-card {
+    border: 1px solid #e8e2d8;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: #fff;
+    transition: box-shadow 0.3s;
+  }
+
+  .enjoy-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+
+  .enjoy-card .enjoy-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .enjoy-card .enjoy-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    margin: 0 0 0.5rem;
+  }
+
+  .enjoy-card .enjoy-desc {
+    font-size: 0.82rem;
+    color: #777;
+    line-height: 1.7;
+    margin: 0;
+  }
+
   /* ===== Section Layout ===== */
   .info-section {
     padding: 4rem 2rem;
@@ -556,6 +599,7 @@
 <nav class="info-nav" id="info-nav">
   <div class="info-nav-inner">
     <a href="#" data-filter="all" class="active">すべて</a>
+    <a href="#enjoy" data-filter="enjoy">楽しみ方</a>
     <a href="#checkin" data-filter="checkin">チェックイン</a>
     <a href="#room" data-filter="room">客室の使い方</a>
     <a href="#sauna" data-filter="sauna">サウナの使い方</a>
@@ -584,6 +628,70 @@
     <div class="qi-sub">pass: itadorisauna</div>
   </div>
 </div>
+
+
+<!-- ========================================== -->
+<!-- 0. 楽しみ方ガイド -->
+<!-- ========================================== -->
+<section class="info-section" id="enjoy" data-section="enjoy" style="background-color: #f9f7f3;">
+  <div class="info-section-inner">
+    <p class="section-label">HOW TO ENJOY</p>
+    <h2>YOHAKUの楽しみ方</h2>
+    <p>使い方の前に、まずは過ごし方のヒントを。<br>YOHAKUには、日常では味わえない体験がいくつも散りばめられています。</p>
+
+    <div class="enjoy-grid">
+
+      <div class="enjoy-card">
+        <div class="enjoy-icon">🧘</div>
+        <div class="enjoy-title">朝ヨガで目覚める</div>
+        <p class="enjoy-desc">ヨガマットを敷いて、朝の澄んだ空気の中でストレッチ。川のせせらぎをBGMに、体を静かにほぐす時間。</p>
+      </div>
+
+      <div class="enjoy-card">
+        <div class="enjoy-icon">🔭</div>
+        <div class="enjoy-title">双眼鏡で自然観察</div>
+        <p class="enjoy-desc">備え付けの双眼鏡で、野鳥や対岸の景色を観察。夜は星空を眺めるのもおすすめです。</p>
+      </div>
+
+      <div class="enjoy-card">
+        <div class="enjoy-icon">☕</div>
+        <div class="enjoy-title">ハンドドリップコーヒー</div>
+        <p class="enjoy-desc">豆を挽くところから始める、贅沢な一杯。コーヒーミルとドリッパーをご用意しています。自然の中で味わう香りは格別です。</p>
+      </div>
+
+      <div class="enjoy-card">
+        <div class="enjoy-icon">🔥</div>
+        <div class="enjoy-title">サウナの楽しみ方</div>
+        <p class="enjoy-desc">薪をくべて、じっくり温める。ロウリュで蒸気を上げ、板取川の水風呂へ。外気浴で空を見上げれば、深いととのいが訪れます。</p>
+      </div>
+
+      <div class="enjoy-card">
+        <div class="enjoy-icon">🚶</div>
+        <div class="enjoy-title">川沿いの散歩</div>
+        <p class="enjoy-desc">板取川沿いをのんびり散策。季節ごとに表情を変える清流と木々の景色が、心をリセットしてくれます。</p>
+      </div>
+
+      <div class="enjoy-card">
+        <div class="enjoy-icon">🧠</div>
+        <div class="enjoy-title">瞑想の時間</div>
+        <p class="enjoy-desc">テラスやチェアに座って、何もしない時間を。川の音に意識を預けるだけで、自然と呼吸が深くなっていきます。</p>
+      </div>
+
+      <div class="enjoy-card">
+        <div class="enjoy-icon">📖</div>
+        <div class="enjoy-title">サウナの本を読む</div>
+        <p class="enjoy-desc">室内にはサウナに関する書籍をご用意。サウナの前後に読めば、ととのいがもっと深くなるかもしれません。</p>
+      </div>
+
+      <div class="enjoy-card">
+        <div class="enjoy-icon">🔥</div>
+        <div class="enjoy-title">焚き火を囲む</div>
+        <p class="enjoy-desc">夜は焚き火を囲んで語らう時間を。揺れる炎を眺めながら過ごす夜は、キャンプとも違う特別な体験です。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- ========================================== -->
