@@ -179,25 +179,31 @@
 
   .yoga-photo {
     flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
     scroll-snap-align: start;
+    overflow: hidden;
+    border-radius: 10px;
   }
 
   .yoga-label {
-    font-size: 0.75rem;
-    color: #8a7a55;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 12px;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+    font-size: 0.8rem;
+    color: #fff;
     letter-spacing: 0.05em;
-    margin-bottom: 6px;
     font-weight: 400;
+    text-align: center;
   }
 
   .yoga-photo img {
     width: 260px;
     height: 180px;
     object-fit: cover;
-    border-radius: 10px;
+    display: block;
   }
 
   .enjoy-photos img {
@@ -775,10 +781,10 @@
       </div>
       <p class="enjoy-lead">ヨガマットを持ってテラスへ。川の音と朝の冷たい空気が、体を静かに起こしてくれます。</p>
       <div class="enjoy-photos">
-        <div class="yoga-photo"><span class="yoga-label">太陽礼拝</span><img src="image/yoga-1.png" alt="太陽礼拝" loading="lazy"></div>
-        <div class="yoga-photo"><span class="yoga-label">キャット＆カウ</span><img src="image/yoga-2.png" alt="キャット＆カウ" loading="lazy"></div>
-        <div class="yoga-photo"><span class="yoga-label">チャイルドポーズ</span><img src="image/yoga-3.png" alt="チャイルドポーズ" loading="lazy"></div>
-        <div class="yoga-photo"><span class="yoga-label">立木のポーズ</span><img src="image/yoga-4.png" alt="立木のポーズ" loading="lazy"></div>
+        <div class="yoga-photo"><img src="image/yoga-1.png" alt="太陽礼拝" loading="lazy"><span class="yoga-label">太陽礼拝</span></div>
+        <div class="yoga-photo"><img src="image/yoga-2.png" alt="キャット＆カウ" loading="lazy"><span class="yoga-label">キャット＆カウ</span></div>
+        <div class="yoga-photo"><img src="image/yoga-3.png" alt="チャイルドポーズ" loading="lazy"><span class="yoga-label">チャイルドポーズ</span></div>
+        <div class="yoga-photo"><img src="image/yoga-4.png" alt="立木のポーズ" loading="lazy"><span class="yoga-label">立木のポーズ</span></div>
       </div>
       <ul class="enjoy-tips">
         <li><strong>太陽礼拝</strong> — 朝一番におすすめ。5〜10分で全身が温まります</li>
